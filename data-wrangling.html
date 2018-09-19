@@ -100,11 +100,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#some-history"><i class="fa fa-check"></i><b>2.1</b> Some history</a></li>
@@ -265,16 +265,16 @@ diamonds</code></pre></div>
 <pre><code># A tibble: 53,940 x 10
    carat cut       color clarity depth table price     x     y     z
    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
- 2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
- 3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
- 4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
- 5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
- 6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
- 7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
- 8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
- 9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
-10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+ 1 0.230 Ideal     E     SI2      61.5   55.   326  3.95  3.98  2.43
+ 2 0.210 Premium   E     SI1      59.8   61.   326  3.89  3.84  2.31
+ 3 0.230 Good      E     VS1      56.9   65.   327  4.05  4.07  2.31
+ 4 0.290 Premium   I     VS2      62.4   58.   334  4.20  4.23  2.63
+ 5 0.310 Good      J     SI2      63.3   58.   335  4.34  4.35  2.75
+ 6 0.240 Very Good J     VVS2     62.8   57.   336  3.94  3.96  2.48
+ 7 0.240 Very Good I     VVS1     62.3   57.   336  3.95  3.98  2.47
+ 8 0.260 Very Good H     SI1      61.9   55.   337  4.07  4.11  2.53
+ 9 0.220 Fair      E     VS2      65.1   61.   337  3.87  3.78  2.49
+10 0.230 Very Good H     VS1      59.4   61.   338  4.00  4.05  2.39
 # ... with 53,930 more rows</code></pre>
 </div>
 <div id="pipes-in-r" class="section level3">
@@ -286,6 +286,7 @@ diamonds</code></pre></div>
 <p>Here is a first example of using the pipe in R.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">library</span>(dplyr)</code></pre></div>
+<pre><code>Warning: package &#39;dplyr&#39; was built under R version 3.3.3</code></pre>
 <pre><code>
 Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code>The following object is masked from &#39;package:car&#39;:
@@ -298,19 +299,20 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(cut <span class="op">==</span><span class="st"> &quot;Ideal&quot;</span>)</code></pre></div>
+<pre><code>Warning: package &#39;bindrcpp&#39; was built under R version 3.3.3</code></pre>
 <pre><code># A tibble: 21,551 x 10
    carat cut   color clarity depth table price     x     y     z
    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1  0.23 Ideal E     SI2      61.5    55   326  3.95  3.98  2.43
- 2  0.23 Ideal J     VS1      62.8    56   340  3.93  3.9   2.46
- 3  0.31 Ideal J     SI2      62.2    54   344  4.35  4.37  2.71
- 4  0.3  Ideal I     SI2      62      54   348  4.31  4.34  2.68
- 5  0.33 Ideal I     SI2      61.8    55   403  4.49  4.51  2.78
- 6  0.33 Ideal I     SI2      61.2    56   403  4.49  4.5   2.75
- 7  0.33 Ideal J     SI1      61.1    56   403  4.49  4.55  2.76
- 8  0.23 Ideal G     VS1      61.9    54   404  3.93  3.95  2.44
- 9  0.32 Ideal I     SI1      60.9    55   404  4.45  4.48  2.72
-10  0.3  Ideal I     SI2      61      59   405  4.3   4.33  2.63
+ 1 0.230 Ideal E     SI2      61.5   55.   326  3.95  3.98  2.43
+ 2 0.230 Ideal J     VS1      62.8   56.   340  3.93  3.90  2.46
+ 3 0.310 Ideal J     SI2      62.2   54.   344  4.35  4.37  2.71
+ 4 0.300 Ideal I     SI2      62.0   54.   348  4.31  4.34  2.68
+ 5 0.330 Ideal I     SI2      61.8   55.   403  4.49  4.51  2.78
+ 6 0.330 Ideal I     SI2      61.2   56.   403  4.49  4.50  2.75
+ 7 0.330 Ideal J     SI1      61.1   56.   403  4.49  4.55  2.76
+ 8 0.230 Ideal G     VS1      61.9   54.   404  3.93  3.95  2.44
+ 9 0.320 Ideal I     SI1      60.9   55.   404  4.45  4.48  2.72
+10 0.300 Ideal I     SI2      61.0   59.   405  4.30  4.33  2.63
 # ... with 21,541 more rows</code></pre>
 <p>The code chunk above will translate to something like “you take the <code>diamonds</code> data, then you subset the data”. This is one of the most powerful things about the tidyverse. In fact, having a standardized chain of processing actions is called “a pipeline”.</p>
 <p>Here is another example where you now filter diamonds based on two characteristics.</p>
@@ -318,31 +320,31 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 <pre><code># A tibble: 3,903 x 10
    carat cut   color clarity depth table price     x     y     z
    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1  0.23 Ideal E     SI2      61.5    55   326  3.95  3.98  2.43
- 2  0.26 Ideal E     VVS2     62.9    58   554  4.02  4.06  2.54
- 3  0.7  Ideal E     SI1      62.5    57  2757  5.7   5.72  3.57
- 4  0.59 Ideal E     VVS2     62      55  2761  5.38  5.43  3.35
- 5  0.74 Ideal E     SI2      62.2    56  2761  5.8   5.84  3.62
- 6  0.7  Ideal E     VS2      60.7    58  2762  5.73  5.76  3.49
- 7  0.74 Ideal E     SI1      62.3    54  2762  5.8   5.83  3.62
- 8  0.7  Ideal E     SI1      60.9    57  2768  5.73  5.76  3.5 
- 9  0.6  Ideal E     VS1      61.7    55  2774  5.41  5.44  3.35
-10  0.7  Ideal E     SI1      62.7    55  2774  5.68  5.74  3.58
+ 1 0.230 Ideal E     SI2      61.5   55.   326  3.95  3.98  2.43
+ 2 0.260 Ideal E     VVS2     62.9   58.   554  4.02  4.06  2.54
+ 3 0.700 Ideal E     SI1      62.5   57.  2757  5.70  5.72  3.57
+ 4 0.590 Ideal E     VVS2     62.0   55.  2761  5.38  5.43  3.35
+ 5 0.740 Ideal E     SI2      62.2   56.  2761  5.80  5.84  3.62
+ 6 0.700 Ideal E     VS2      60.7   58.  2762  5.73  5.76  3.49
+ 7 0.740 Ideal E     SI1      62.3   54.  2762  5.80  5.83  3.62
+ 8 0.700 Ideal E     SI1      60.9   57.  2768  5.73  5.76  3.50
+ 9 0.600 Ideal E     VS1      61.7   55.  2774  5.41  5.44  3.35
+10 0.700 Ideal E     SI1      62.7   55.  2774  5.68  5.74  3.58
 # ... with 3,893 more rows</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">filter</span>(cut <span class="op">==</span><span class="st"> &quot;Ideal&quot;</span> <span class="op">&amp;</span><span class="st"> </span>color <span class="op">==</span><span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;E&quot;</span>, <span class="st">&quot;D&quot;</span>))</code></pre></div>
 <pre><code># A tibble: 3,377 x 10
    carat cut   color clarity depth table price     x     y     z
    &lt;dbl&gt; &lt;ord&gt; &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1  0.23 Ideal E     SI2      61.5    55   326  3.95  3.98  2.43
- 2  0.3  Ideal D     SI1      62.1    56   552  4.3   4.33  2.68
- 3  0.26 Ideal E     VVS2     62.9    58   554  4.02  4.06  2.54
- 4  0.7  Ideal E     SI1      62.5    57  2757  5.7   5.72  3.57
- 5  0.7  Ideal E     VS2      60.7    58  2762  5.73  5.76  3.49
- 6  0.76 Ideal D     SI2      62.4    57  2770  5.78  5.83  3.62
- 7  0.73 Ideal D     SI2      59.9    57  2770  5.92  5.89  3.54
- 8  0.7  Ideal E     SI1      62.7    55  2774  5.68  5.74  3.58
- 9  0.54 Ideal E     VVS2     61.6    56  2776  5.25  5.27  3.24
-10  0.7  Ideal E     SI1      61.4    57  2777  5.76  5.7   3.52
+ 1 0.230 Ideal E     SI2      61.5   55.   326  3.95  3.98  2.43
+ 2 0.300 Ideal D     SI1      62.1   56.   552  4.30  4.33  2.68
+ 3 0.260 Ideal E     VVS2     62.9   58.   554  4.02  4.06  2.54
+ 4 0.700 Ideal E     SI1      62.5   57.  2757  5.70  5.72  3.57
+ 5 0.700 Ideal E     VS2      60.7   58.  2762  5.73  5.76  3.49
+ 6 0.760 Ideal D     SI2      62.4   57.  2770  5.78  5.83  3.62
+ 7 0.730 Ideal D     SI2      59.9   57.  2770  5.92  5.89  3.54
+ 8 0.700 Ideal E     SI1      62.7   55.  2774  5.68  5.74  3.58
+ 9 0.540 Ideal E     VVS2     61.6   56.  2776  5.25  5.27  3.24
+10 0.700 Ideal E     SI1      61.4   57.  2777  5.76  5.70  3.52
 # ... with 3,367 more rows</code></pre>
 </div>
 <div id="summarize-variables-using-summarize" class="section level3">
@@ -440,15 +442,13 @@ new_diamonds &lt;-<span class="st"> </span>diamonds <span class="op">%&gt;%</spa
 <h3><span class="header-section-number">6.2.2</span> What is a <code>data.table</code>?</h3>
 <p>Here you see some basic illustrations with the <code>diamonds</code> data.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(data.table)</code></pre></div>
-<pre><code>data.table 1.11.2</code></pre>
-<pre><code>  The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way</code></pre>
-<pre><code>  Documentation: ?data.table, example(data.table) and browseVignettes(&quot;data.table&quot;)</code></pre>
-<pre><code>  Release notes, videos and slides: http://r-datatable.com</code></pre>
+<pre><code>data.table 1.9.6  For help type ?data.table or https://github.com/Rdatatable/data.table/wiki</code></pre>
+<pre><code>The fastest way to learn (by data.table authors): https://www.datacamp.com/courses/data-analysis-the-data-table-way</code></pre>
 <pre><code>
 Attaching package: &#39;data.table&#39;</code></pre>
 <pre><code>The following objects are masked from &#39;package:dplyr&#39;:
 
-    between, first, last</code></pre>
+    between, last</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
 <span class="kw">str</span>(diamonds)</code></pre></div>
 <pre><code>Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:   53940 obs. of  10 variables:
@@ -486,9 +486,11 @@ diamonds_DT <span class="co"># notice intelligent printing of this DT</span></co
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># key is used to index the data.table and will provide the extra speed</span>
 <span class="kw">setkey</span>(diamonds_DT, cut)
 <span class="kw">tables</span>()</code></pre></div>
-<pre><code>          NAME   NROW NCOL MB                                    COLS KEY
-1: diamonds_DT 53,940   10  3 carat,cut,color,clarity,depth,table,... cut
-Total: 3MB</code></pre>
+<pre><code>     NAME          NROW NCOL MB COLS                                           
+[1,] diamonds_DT 53,940   10  4 carat,cut,color,clarity,depth,table,price,x,y,z
+     KEY
+[1,] cut
+Total: 4MB</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">diamonds_DT[<span class="kw">J</span>(<span class="st">&quot;Ideal&quot;</span>), ]</code></pre></div>
 <pre><code>       carat   cut color clarity depth table price    x    y    z
     1:  0.23 Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
@@ -505,9 +507,11 @@ Total: 3MB</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># more than one column can be set as key</span>
 <span class="kw">setkey</span>(diamonds_DT, cut, color)
 <span class="kw">tables</span>()</code></pre></div>
-<pre><code>          NAME   NROW NCOL MB                                    COLS       KEY
-1: diamonds_DT 53,940   10  3 carat,cut,color,clarity,depth,table,... cut,color
-Total: 3MB</code></pre>
+<pre><code>     NAME          NROW NCOL MB COLS                                           
+[1,] diamonds_DT 53,940   10  4 carat,cut,color,clarity,depth,table,price,x,y,z
+     KEY      
+[1,] cut,color
+Total: 4MB</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># access rows according to both keys, use function &#39;J&#39;</span>
 diamonds_DT[<span class="kw">J</span>(<span class="st">&quot;Ideal&quot;</span>, <span class="st">&quot;E&quot;</span>), ]</code></pre></div>
 <pre><code>      carat   cut color clarity depth table price    x    y    z
@@ -540,16 +544,16 @@ diamonds_DT[<span class="kw">J</span>(<span class="st">&quot;Ideal&quot;</span>,
 <pre><code># A tibble: 53,940 x 10
    carat cut       color clarity depth table price     x     y     z
    &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
- 1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
- 2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
- 3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
- 4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
- 5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
- 6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
- 7 0.24  Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
- 8 0.26  Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
- 9 0.22  Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
-10 0.23  Very Good H     VS1      59.4    61   338  4     4.05  2.39
+ 1 0.230 Ideal     E     SI2      61.5   55.   326  3.95  3.98  2.43
+ 2 0.210 Premium   E     SI1      59.8   61.   326  3.89  3.84  2.31
+ 3 0.230 Good      E     VS1      56.9   65.   327  4.05  4.07  2.31
+ 4 0.290 Premium   I     VS2      62.4   58.   334  4.20  4.23  2.63
+ 5 0.310 Good      J     SI2      63.3   58.   335  4.34  4.35  2.75
+ 6 0.240 Very Good J     VVS2     62.8   57.   336  3.94  3.96  2.48
+ 7 0.240 Very Good I     VVS1     62.3   57.   336  3.95  3.98  2.47
+ 8 0.260 Very Good H     SI1      61.9   55.   337  4.07  4.11  2.53
+ 9 0.220 Fair      E     VS2      65.1   61.   337  3.87  3.78  2.49
+10 0.230 Very Good H     VS1      59.4   61.   338  4.00  4.05  2.39
 # ... with 53,930 more rows</code></pre>
 </div>
 <div id="alternative-and-faster-ways-to-aggregate" class="section level3">
@@ -565,7 +569,7 @@ diamonds_DT[<span class="kw">J</span>(<span class="st">&quot;Ideal&quot;</span>,
 5     Ideal 3457.5</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(<span class="kw">aggregate</span>(price <span class="op">~</span><span class="st"> </span>cut, diamonds, mean))</code></pre></div>
 <pre><code>   user  system elapsed 
-   0.03    0.00    0.09 </code></pre>
+   0.04    0.00    0.04 </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># aggregation with data.table</span>
 <span class="co"># will go faster thanks to indexing</span>
 diamonds_DT[ , <span class="kw">mean</span>(price), by=cut]</code></pre></div>
@@ -577,7 +581,7 @@ diamonds_DT[ , <span class="kw">mean</span>(price), by=cut]</code></pre></div>
 5:     Ideal 3457.5</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">system.time</span>(diamonds_DT[ , <span class="kw">mean</span>(price), <span class="dt">by=</span>cut])</code></pre></div>
 <pre><code>   user  system elapsed 
-   0.01    0.00    0.08 </code></pre>
+      0       0       0 </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># give variable names in the create date.table</span>
 diamonds_DT[ , <span class="kw">list</span>(<span class="dt">price =</span> <span class="kw">mean</span>(price)), by=cut]</code></pre></div>
 <pre><code>         cut  price
@@ -783,7 +787,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

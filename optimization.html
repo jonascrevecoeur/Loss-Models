@@ -100,11 +100,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#some-history"><i class="fa fa-check"></i><b>2.1</b> Some history</a></li>
@@ -322,13 +322,13 @@ f &lt;-<span class="st"> </span><span class="cf">function</span>(p,x){
 <pre><code>Warning in dgamma(x, shape = p[1], rate = p[2], log = TRUE): NaNs produced</code></pre>
 <pre><code>Warning in nlm(f, c(1, 1), x = x): NA/Inf replaced by maximum positive value</code></pre>
 <pre><code>$minimum
-[1] 14464
+[1] 14304
 
 $estimate
-[1] 2.9861 1.4893
+[1] 3.0496 1.5335
 
 $gradient
-[1] -0.0026571  0.0029118
+[1] -0.0029018  0.0031873
 
 $code
 [1] 1
@@ -338,14 +338,14 @@ $iterations
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># same example, now use &#39;optim&#39;</span>
 <span class="kw">optim</span>(<span class="kw">c</span>(<span class="dv">1</span>, <span class="dv">1</span>), f, <span class="dt">x=</span>x)</code></pre></div>
 <pre><code>$par
-[1] 2.9864 1.4895
+[1] 3.0497 1.5334
 
 $value
-[1] 14464
+[1] 14304
 
 $counts
 function gradient 
-      71       NA 
+      67       NA 
 
 $convergence
 [1] 0
@@ -394,7 +394,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

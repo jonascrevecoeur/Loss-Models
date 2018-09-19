@@ -100,11 +100,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#some-history"><i class="fa fa-check"></i><b>2.1</b> Some history</a></li>
@@ -366,19 +366,19 @@ graph.path &lt;-<span class="st"> </span><span class="kw">file.path</span>(path,
 <span class="kw">ggplot</span>(<span class="dt">data =</span> mtcars, <span class="dt">mapping =</span> <span class="kw">aes</span>(<span class="dt">x =</span> hp, <span class="dt">y =</span> mpg)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape=</span><span class="dv">1</span>, <span class="dt">alpha =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_smooth</span>() </code></pre></div>
-<pre><code>`geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<pre><code>`geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-57-1.png" width="576" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># shorter</span>
 <span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="dt">x =</span> hp, <span class="dt">y =</span> mpg)) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape=</span><span class="dv">1</span>, <span class="dt">alpha =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_smooth</span>() </code></pre></div>
-<pre><code>`geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<pre><code>`geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-57-2.png" width="576" style="display: block; margin: auto;" /></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># use black and white lay-out</span>
 <span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="dt">x =</span> hp, <span class="dt">y =</span> mpg)) <span class="op">+</span><span class="st"> </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">shape=</span><span class="dv">1</span>, <span class="dt">alpha =</span> <span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)<span class="op">+</span><span class="st"> </span>
 <span class="st">  </span><span class="kw">geom_smooth</span>() </code></pre></div>
-<pre><code>`geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<pre><code>`geom_smooth()` using method = &#39;loess&#39; and formula &#39;y ~ x&#39;</code></pre>
 <p><img src="_main_files/figure-html/unnamed-chunk-57-3.png" width="576" style="display: block; margin: auto;" /></p>
 <p>You can add a third variable to a two dimensional scatterplot by mapping it to an aesthetic. An aesthetic is a visual property of the objects in your plot. Aesthetics include things like the size, the shape, or the color of your points. You can display a point in different ways by changing the values of its aesthetic properties.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(<span class="dt">x =</span> hp, <span class="dt">y =</span> mpg))<span class="op">+</span>
@@ -403,6 +403,7 @@ p <span class="op">+</span><span class="st"> </span><span class="kw">geom_boxplo
 <h3><span class="header-section-number">5.2.2</span> Fancy correlation plots</h3>
 <p>You use the package <code>corrplot</code> to visualize correlations between variables. For more examples, see <a href="http://cran.r-project.org/web/packages/corrplot/vignettes/corrplot-intro.html">corrplot</a>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(corrplot)</code></pre></div>
+<pre><code>Warning: package &#39;corrplot&#39; was built under R version 3.3.3</code></pre>
 <pre><code>corrplot 0.84 loaded</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># get correlation matrix</span>
 M &lt;-<span class="st"> </span><span class="kw">cor</span>(mtcars)
@@ -521,7 +522,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }

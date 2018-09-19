@@ -100,11 +100,11 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
-<li class="chapter" data-level="1.1" data-path="intro.html"><a href="intro.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
-<li class="chapter" data-level="1.2" data-path="intro.html"><a href="intro.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
-<li class="chapter" data-level="1.3" data-path="intro.html"><a href="intro.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
-<li class="chapter" data-level="1.4" data-path="intro.html"><a href="intro.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#subsec:learning-goals"><i class="fa fa-check"></i><b>1.1</b> Learning outcomes</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#subsec:pipeline"><i class="fa fa-check"></i><b>1.2</b> Data/science pipeline</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#inspirations-and-references"><i class="fa fa-check"></i><b>1.3</b> Inspirations and references</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#sec:about-book"><i class="fa fa-check"></i><b>1.4</b> About this book</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting started in R</a><ul>
 <li class="chapter" data-level="2.1" data-path="getting-started.html"><a href="getting-started.html#some-history"><i class="fa fa-check"></i><b>2.1</b> Some history</a></li>
@@ -547,8 +547,9 @@ severity &lt;-<span class="st"> </span><span class="kw">read.sas7bdat</span>(pat
 <p>You will import data from Excel using the <code>readxl</code> package (authord by Hacley Wickham and maintained by RStudio).</p>
 <p>Before you can start importing from Excel, you should find out which sheets are available in the workbook. You can use the <code>excel_sheets()</code> function for this. (Quote and example from DataCamp’s ‘Importing Data in R (Part 1)’ course)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># load the readxl package</span>
-<span class="kw">library</span>(readxl)
-path.urbanpop &lt;-<span class="st"> </span><span class="kw">file.path</span>(path, <span class="st">&quot;urbanpop.xlsx&quot;</span>)
+<span class="kw">library</span>(readxl)</code></pre></div>
+<pre><code>Warning: package &#39;readxl&#39; was built under R version 3.3.3</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">path.urbanpop &lt;-<span class="st"> </span><span class="kw">file.path</span>(path, <span class="st">&quot;urbanpop.xlsx&quot;</span>)
 <span class="kw">excel_sheets</span>(path.urbanpop)</code></pre></div>
 <pre><code>[1] &quot;1960-1966&quot; &quot;1967-1974&quot; &quot;1975-2011&quot;</code></pre>
 <p>You can import the Excel file with the <code>read_excel()</code> function. Here is the recipe:</p>
@@ -840,85 +841,85 @@ x2 &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">
 mydat<span class="op">$</span>grade &lt;-<span class="st"> </span>y  
 <span class="kw">head</span>(mydat)</code></pre></div>
 <pre><code>  id group grade
-1  1     1    81
-2  2     1    99
-3  3     1    89
-4  4     2    76
-5  5     2    88
-6  6     2    75</code></pre>
+1  1     1    89
+2  2     1    70
+3  3     1    76
+4  4     2    96
+5  5     2    78
+6  6     2    80</code></pre>
 <p>Now, you’ll merge different data frames by adding new columns to an existing data frame.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> mydat<span class="op">$</span>id, y)
 <span class="kw">head</span>(df)</code></pre></div>
 <pre><code>  id  y
-1  1 81
-2  2 99
-3  3 89
-4  4 76
-5  5 88
-6  6 75</code></pre>
+1  1 89
+2  2 70
+3  3 76
+4  4 96
+5  5 78
+6  6 80</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydat2 &lt;-<span class="st"> </span><span class="kw">merge</span>(mydat, df, <span class="dt">by =</span> <span class="st">&quot;id&quot;</span>, <span class="dt">sort =</span> F) <span class="co"># using merge</span>
 <span class="kw">head</span>(mydat2)</code></pre></div>
 <pre><code>  id group grade  y
-1  1     1    81 81
-2  2     1    99 99
-3  3     1    89 89
-4  4     2    76 76
-5  5     2    88 88
-6  6     2    75 75</code></pre>
+1  1     1    89 89
+2  2     1    70 70
+3  3     1    76 76
+4  4     2    96 96
+5  5     2    78 78
+6  6     2    80 80</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydat3 &lt;-<span class="st"> </span><span class="kw">cbind</span>(mydat, x) <span class="co"># using cbind()</span>
 <span class="kw">head</span>(mydat3)</code></pre></div>
-<pre><code>  id group grade         x
-1  1     1    81  0.478502
-2  2     1    99  0.005724
-3  3     1    89 -2.276427
-4  4     2    76  1.002751
-5  5     2    88  0.103403
-6  6     2    75 -0.590842</code></pre>
+<pre><code>  id group grade        x
+1  1     1    89  1.82071
+2  2     1    70  1.59967
+3  3     1    76  0.04561
+4  4     2    96  0.42507
+5  5     2    78 -0.09332
+6  6     2    80 -1.02317</code></pre>
 <p>Now, you’ll add rows to an existing data frame.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># add rows</span>
 df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">id =</span> <span class="kw">factor</span>(<span class="dv">13</span><span class="op">:</span><span class="dv">24</span>), 
                  <span class="dt">group =</span> <span class="kw">factor</span>(<span class="kw">rep</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, <span class="dt">e =</span> <span class="dv">3</span>)), <span class="dt">grade =</span> <span class="kw">sample</span>(y))
 df</code></pre></div>
 <pre><code>   id group grade
-1  13     1    99
-2  14     1    75
-3  15     1    76
-4  16     2    87
-5  17     2    95
-6  18     2    94
-7  19     1    89
-8  20     1    73
-9  21     1    81
-10 22     2    88
-11 23     2    91
-12 24     2    86</code></pre>
+1  13     1    71
+2  14     1    96
+3  15     1    85
+4  16     2    70
+5  17     2    75
+6  18     2    91
+7  19     1    78
+8  20     1    76
+9  21     1    97
+10 22     2    90
+11 23     2    80
+12 24     2    89</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mydat2 &lt;-<span class="st"> </span><span class="kw">rbind</span>(mydat, df)
 mydat2</code></pre></div>
 <pre><code>   id group grade
-1   1     1    81
-2   2     1    99
-3   3     1    89
-4   4     2    76
-5   5     2    88
-6   6     2    75
-7   7     1    91
-8   8     1    95
-9   9     1    94
-10 10     2    73
-11 11     2    87
-12 12     2    86
-13 13     1    99
-14 14     1    75
-15 15     1    76
-16 16     2    87
-17 17     2    95
-18 18     2    94
-19 19     1    89
-20 20     1    73
-21 21     1    81
-22 22     2    88
-23 23     2    91
-24 24     2    86</code></pre>
+1   1     1    89
+2   2     1    70
+3   3     1    76
+4   4     2    96
+5   5     2    78
+6   6     2    80
+7   7     1    97
+8   8     1    90
+9   9     1    91
+10 10     2    85
+11 11     2    75
+12 12     2    71
+13 13     1    71
+14 14     1    96
+15 15     1    85
+16 16     2    70
+17 17     2    75
+18 18     2    91
+19 19     1    78
+20 20     1    76
+21 21     1    97
+22 22     2    90
+23 23     2    80
+24 24     2    89</code></pre>
 </div>
 <div id="aggregate" class="section level3">
 <h3><span class="header-section-number">4.2.5</span> Aggregate</h3>
@@ -929,12 +930,12 @@ mydat2</code></pre></div>
 <pre><code># A tibble: 6 x 10
   carat cut       color clarity depth table price     x     y     z
   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
-2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
-3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
-4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
-5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
-6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48</code></pre>
+1 0.230 Ideal     E     SI2      61.5   55.   326  3.95  3.98  2.43
+2 0.210 Premium   E     SI1      59.8   61.   326  3.89  3.84  2.31
+3 0.230 Good      E     VS1      56.9   65.   327  4.05  4.07  2.31
+4 0.290 Premium   I     VS2      62.4   58.   334  4.20  4.23  2.63
+5 0.310 Good      J     SI2      63.3   58.   335  4.34  4.35  2.75
+6 0.240 Very Good J     VVS2     62.8   57.   336  3.94  3.96  2.48</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># average price for each type of cut</span>
 <span class="kw">aggregate</span>(price <span class="op">~</span><span class="st"> </span>cut, diamonds, mean)</code></pre></div>
 <pre><code>        cut price
@@ -978,12 +979,12 @@ s</code></pre></div>
 <pre><code># A tibble: 6 x 10
   carat cut       color clarity depth table price     x     y     z
   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
-1 0.23  Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
-2 0.21  Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
-3 0.23  Good      E     VS1      56.9    65   327  4.05  4.07  2.31
-4 0.290 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
-5 0.31  Good      J     SI2      63.3    58   335  4.34  4.35  2.75
-6 0.24  Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48</code></pre>
+1 0.230 Ideal     E     SI2      61.5   55.   326  3.95  3.98  2.43
+2 0.210 Premium   E     SI1      59.8   61.   326  3.89  3.84  2.31
+3 0.230 Good      E     VS1      56.9   65.   327  4.05  4.07  2.31
+4 0.290 Premium   I     VS2      62.4   58.   334  4.20  4.23  2.63
+5 0.310 Good      J     SI2      63.3   58.   335  4.34  4.35  2.75
+6 0.240 Very Good J     VVS2     62.8   57.   336  3.94  3.96  2.48</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">subset</span>(dd, cut <span class="op">==</span><span class="st"> &quot;Very Good&quot;</span>))</code></pre></div>
 <pre><code>            cut carat color clarity depth table price.x    x    y    z price.y
 40249 Very Good  1.01     F     VS2  61.6    57    6773 6.39 6.46 3.96    3982
@@ -1132,12 +1133,12 @@ res &lt;-<span class="st"> </span><span class="kw">aggregate</span>(price <span 
 5            other   yes      no</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(CPS1985<span class="op">$</span>wage)</code></pre></div>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   1.00    5.25    7.78    9.02   11.25   44.50 </code></pre>
+   1.00    5.25    7.78    9.02   11.20   44.50 </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># attach the data set; R knows where to find the variables</span>
 <span class="kw">attach</span>(CPS1985)
 <span class="kw">summary</span>(wage)</code></pre></div>
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-   1.00    5.25    7.78    9.02   11.25   44.50 </code></pre>
+   1.00    5.25    7.78    9.02   11.20   44.50 </code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">is.numeric</span>(wage)</code></pre></div>
 <pre><code>[1] TRUE</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(wage)</code></pre></div>
@@ -1326,7 +1327,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["_main.pdf"],
+"download": null,
 "toc": {
 "collapse": "subsection"
 }
