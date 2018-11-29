@@ -234,7 +234,7 @@ sim &lt;-<span class="st"> </span><span class="kw">rexp</span>(nsim, <span class
 
 <span class="co"># @5.</span>
 <span class="kw">mean</span>(sim)</code></pre></div>
-<pre><code>## [1] 5.096958</code></pre>
+<pre><code>## [1] 5.071615</code></pre>
 </div>
 </div>
 <div id="exploratory-analysis" class="section level3">
@@ -248,7 +248,7 @@ sim &lt;-<span class="st"> </span><span class="kw">rexp</span>(nsim, <span class
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @1. </span>
 variance &lt;-<span class="st"> </span><span class="kw">var</span>(sim)
 variance</code></pre></div>
-<pre><code>## [1] 26.14131</code></pre>
+<pre><code>## [1] 26.28107</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @2.</span>
 mu &lt;-<span class="st"> </span><span class="kw">mean</span>(sim)
 sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">var</span>(sim))
@@ -256,15 +256,15 @@ numerator &lt;-<span class="st"> </span><span class="kw">mean</span>((sim <span 
 
 skewness &lt;-<span class="st"> </span>numerator <span class="op">/</span><span class="st"> </span>sigma<span class="op">^</span><span class="dv">3</span>
 skewness</code></pre></div>
-<pre><code>## [1] 2.148831</code></pre>
+<pre><code>## [1] 2.072729</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @3.</span>
 var95 &lt;-<span class="st"> </span><span class="kw">quantile</span>(sim, <span class="fl">0.95</span>);
 var95</code></pre></div>
 <pre><code>##      95% 
-## 15.09189</code></pre>
+## 15.31045</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tvar95 &lt;-<span class="st"> </span><span class="kw">mean</span>(sim[sim <span class="op">&gt;</span><span class="st"> </span>var95])
 tvar95</code></pre></div>
-<pre><code>## [1] 20.36679</code></pre>
+<pre><code>## [1] 20.64415</code></pre>
 </div>
 </div>
 <div id="data-visualization-with-ggplot" class="section level3">
@@ -403,13 +403,13 @@ fit &lt;-<span class="st"> </span><span class="kw">nlm</span>(negLoglikelihood, 
 ## maximum positive value</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit</code></pre></div>
 <pre><code>## $minimum
-## [1] 26286.44
+## [1] 26236.59
 ## 
 ## $estimate
-## [1] -1.628645
+## [1] -1.62366
 ## 
 ## $gradient
-## [1] -0.000131791
+## [1] -0.0001165114
 ## 
 ## $hessian
 ##          [,1]
@@ -423,15 +423,15 @@ fit &lt;-<span class="st"> </span><span class="kw">nlm</span>(negLoglikelihood, 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @5</span>
 lambdaMLE &lt;-<span class="st"> </span><span class="kw">exp</span>(fit<span class="op">$</span>estimate)
 lambdaMLE</code></pre></div>
-<pre><code>## [1] 0.1961953</code></pre>
+<pre><code>## [1] 0.1971757</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nsim <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(sim)</code></pre></div>
-<pre><code>## [1] 0.1961954</code></pre>
+<pre><code>## [1] 0.1971759</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @6</span>
 sigma.beta &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">solve</span>(fit<span class="op">$</span>hessian))
 sigma.lambda &lt;-<span class="st"> </span>sigma.beta <span class="op">*</span><span class="st"> </span>lambdaMLE<span class="op">^</span><span class="dv">2</span>
 
 <span class="kw">c</span>(lambda <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma.lambda, lambda <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma.lambda)</code></pre></div>
-<pre><code>## [1] 0.1992456 0.2007544</code></pre>
+<pre><code>## [1] 0.199238 0.200762</code></pre>
 </div>
 </div>
 </div>
@@ -444,16 +444,16 @@ sigma.lambda &lt;-<span class="st"> </span>sigma.beta <span class="op">*</span><
 <ol style="list-style-type: decimal">
 <li>Simulate <code>10 000</code> observations from a lognormal distribution with density</li>
 </ol>
-<p><span class="math display">\[f(x) = \frac{1}{x \cdot \sqrt{2 \pi}} \cdot \exp \left( -(\ln(x) - 1.5 \right)^2).\]</span> Hint: Check the specification of the lognormal distribution in R, <code>?rlnorm</code>.</p>
+<p><span class="math display">\[f(x) = \frac{1}{x \cdot \sqrt{2 \pi}} \cdot \exp \left( -(\ln(x) + 1.5 \right)^2).\]</span> Hint: Check the specification of the lognormal distribution in R, <code>?rlnorm</code>.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Discretize the data by rounding down using the <code>floor</code> function.</li>
 </ol>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Example of the floor function</span>
 x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">6</span>)<span class="op">*</span><span class="dv">3</span>
 <span class="kw">rbind</span>(<span class="dt">x =</span> x, <span class="dt">floor =</span> <span class="kw">floor</span>(x))</code></pre></div>
-<pre><code>##           [,1]    [,2]     [,3]    [,4]     [,5]     [,6]
-## x     2.744321 1.77413 2.771777 1.52748 1.529778 1.726919
-## floor 2.000000 1.00000 2.000000 1.00000 1.000000 1.000000</code></pre>
+<pre><code>##           [,1]     [,2]    [,3]     [,4]     [,5]      [,6]
+## x     1.613835 1.577904 1.43718 0.965085 2.169134 0.9783284
+## floor 1.000000 1.000000 1.00000 0.000000 2.000000 0.0000000</code></pre>
 <div class="fold s">
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nsim &lt;-<span class="st"> </span><span class="dv">10000</span>;
 sim &lt;-<span class="st"> </span><span class="kw">exp</span>(<span class="kw">rnorm</span>(nsim, <span class="dt">mean =</span> <span class="op">-</span><span class="fl">1.5</span>, <span class="dt">sd =</span> <span class="dv">1</span>))
