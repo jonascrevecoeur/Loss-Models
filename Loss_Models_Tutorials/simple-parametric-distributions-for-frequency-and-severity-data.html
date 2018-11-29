@@ -234,7 +234,7 @@ sim &lt;-<span class="st"> </span><span class="kw">rexp</span>(nsim, <span class
 
 <span class="co"># @5.</span>
 <span class="kw">mean</span>(sim)</code></pre></div>
-<pre><code>## [1] 5.070753</code></pre>
+<pre><code>## [1] 5.096958</code></pre>
 </div>
 </div>
 <div id="exploratory-analysis" class="section level3">
@@ -248,7 +248,7 @@ sim &lt;-<span class="st"> </span><span class="kw">rexp</span>(nsim, <span class
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @1. </span>
 variance &lt;-<span class="st"> </span><span class="kw">var</span>(sim)
 variance</code></pre></div>
-<pre><code>## [1] 26.08425</code></pre>
+<pre><code>## [1] 26.14131</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @2.</span>
 mu &lt;-<span class="st"> </span><span class="kw">mean</span>(sim)
 sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">var</span>(sim))
@@ -256,15 +256,15 @@ numerator &lt;-<span class="st"> </span><span class="kw">mean</span>((sim <span 
 
 skewness &lt;-<span class="st"> </span>numerator <span class="op">/</span><span class="st"> </span>sigma<span class="op">^</span><span class="dv">3</span>
 skewness</code></pre></div>
-<pre><code>## [1] 2.06657</code></pre>
+<pre><code>## [1] 2.148831</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @3.</span>
 var95 &lt;-<span class="st"> </span><span class="kw">quantile</span>(sim, <span class="fl">0.95</span>);
 var95</code></pre></div>
 <pre><code>##      95% 
-## 14.90182</code></pre>
+## 15.09189</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tvar95 &lt;-<span class="st"> </span><span class="kw">mean</span>(sim[sim <span class="op">&gt;</span><span class="st"> </span>var95])
 tvar95</code></pre></div>
-<pre><code>## [1] 20.47118</code></pre>
+<pre><code>## [1] 20.36679</code></pre>
 </div>
 </div>
 <div id="data-visualization-with-ggplot" class="section level3">
@@ -284,7 +284,8 @@ tvar95</code></pre></div>
 <p>2.3. Add the black and white ggplot theme, <code>theme_bw()</code>;</p>
 <p>2.4. Add <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> labels to the graph. Hint: use <code>xlab</code>, <code>ylab</code>;</p>
 <p>2.5. Add a vertical line to indicate the <span class="math inline">\(VaR_{0.95}\)</span>. Check the documentation for <a href="https://www.rdocumentation.org/packages/ggplot2/versions/0.9.1/topics/geom_vline"><code>geom_vline</code></a>;</p>
-<p>2.6. Add a title to the plot using <code>ggtitle</code>.</p>
+<p>2.6. Add a title to the plot using <code>ggtitle</code>;</p>
+<p>2.7. Change the number of simulations <code>nsim</code> to 50 and observe the effect on the empirical CDF.</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Use <a href="https://www.rdocumentation.org/packages/ggplot2/versions/0.9.1/topics/geom_density"><code>geom_density</code></a> to create a density plot of the data. Improve the look of the graph using what you learned when creating the plot of the empirical CDF.</li>
 </ol>
@@ -402,13 +403,13 @@ fit &lt;-<span class="st"> </span><span class="kw">nlm</span>(negLoglikelihood, 
 ## maximum positive value</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">fit</code></pre></div>
 <pre><code>## $minimum
-## [1] 26234.89
+## [1] 26286.44
 ## 
 ## $estimate
-## [1] -1.62349
+## [1] -1.628645
 ## 
 ## $gradient
-## [1] -0.0001165236
+## [1] -0.000131791
 ## 
 ## $hessian
 ##          [,1]
@@ -422,17 +423,15 @@ fit &lt;-<span class="st"> </span><span class="kw">nlm</span>(negLoglikelihood, 
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @5</span>
 lambdaMLE &lt;-<span class="st"> </span><span class="kw">exp</span>(fit<span class="op">$</span>estimate)
 lambdaMLE</code></pre></div>
-<pre><code>## [1] 0.1972092</code></pre>
+<pre><code>## [1] 0.1961953</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nsim <span class="op">/</span><span class="st"> </span><span class="kw">sum</span>(sim)</code></pre></div>
-<pre><code>## [1] 0.1972094</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @6.1</span>
-sigma &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">solve</span>(fit<span class="op">$</span>hessian))
-sigma</code></pre></div>
-<pre><code>##             [,1]
-## [1,] 0.009999504</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @6.2</span>
-<span class="kw">c</span>(lambda <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma, lambda <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma)</code></pre></div>
-<pre><code>## [1] 0.1804013 0.2195987</code></pre>
+<pre><code>## [1] 0.1961954</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @6</span>
+sigma.beta &lt;-<span class="st"> </span><span class="kw">sqrt</span>(<span class="kw">solve</span>(fit<span class="op">$</span>hessian))
+sigma.lambda &lt;-<span class="st"> </span>sigma.beta <span class="op">*</span><span class="st"> </span>lambdaMLE<span class="op">^</span><span class="dv">2</span>
+
+<span class="kw">c</span>(lambda <span class="op">-</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma.lambda, lambda <span class="op">+</span><span class="st"> </span><span class="kw">qnorm</span>(<span class="fl">0.975</span>) <span class="op">*</span><span class="st"> </span>sigma.lambda)</code></pre></div>
+<pre><code>## [1] 0.1992456 0.2007544</code></pre>
 </div>
 </div>
 </div>
@@ -452,9 +451,9 @@ sigma</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Example of the floor function</span>
 x &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">6</span>)<span class="op">*</span><span class="dv">3</span>
 <span class="kw">rbind</span>(<span class="dt">x =</span> x, <span class="dt">floor =</span> <span class="kw">floor</span>(x))</code></pre></div>
-<pre><code>##           [,1]      [,2]      [,3]      [,4]     [,5]      [,6]
-## x     1.617025 0.3171516 0.9430748 0.5183794 1.981851 0.5098972
-## floor 1.000000 0.0000000 0.0000000 0.0000000 1.000000 0.0000000</code></pre>
+<pre><code>##           [,1]    [,2]     [,3]    [,4]     [,5]     [,6]
+## x     2.744321 1.77413 2.771777 1.52748 1.529778 1.726919
+## floor 2.000000 1.00000 2.000000 1.00000 1.000000 1.000000</code></pre>
 <div class="fold s">
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nsim &lt;-<span class="st"> </span><span class="dv">10000</span>;
 sim &lt;-<span class="st"> </span><span class="kw">exp</span>(<span class="kw">rnorm</span>(nsim, <span class="dt">mean =</span> <span class="op">-</span><span class="fl">1.5</span>, <span class="dt">sd =</span> <span class="dv">1</span>))
@@ -540,7 +539,7 @@ lhs &lt;-<span class="st"> </span>k <span class="op">*</span><span class="st"> <
 </ul>
 <div id="geometric" class="section level4">
 <h4><span class="header-section-number">2.2.3.1</span> Geometric</h4>
-<p>For a Geometric distribution with parameter <span class="math inline">\(p \in [0, 1]\)</span> the probability of observing <span class="math inline">\(k\)</span> events is given by <span class="math display">\[ P(N = k) = (1-p)^{k} \cdot p.\]</span> In the Appendix ‘An inventory of discrete distributions’ of the Loss Models book you will find a different parameterization. That is <span class="math display">\[ P(N=k) = \left(\frac{\beta}{1+\beta}\right)^k \cdot \frac{1}{(1+\beta)}.\]</span> If you put <span class="math inline">\(p = \frac{1}{1+\beta}\)</span> you can work from the second to the first parametrization. Verify this.</p>
+<p>For a Geometric distribution with parameter <span class="math inline">\(p \in [0, 1]\)</span> the probability of observing <span class="math inline">\(k\)</span> events is given by <span class="math display">\[ P(N = k) = (1-p)^{k} \cdot p.\]</span> In the Appendix ‘An inventory of discrete distributions’ of the Loss Models book you will find a different parameterization. That is <span class="math display">\[ P(N=k) = \left(\frac{\theta}{1+\theta}\right)^k \cdot \frac{1}{(1+\theta)}.\]</span> If you put <span class="math inline">\(p = \frac{1}{1+\theta}\)</span> you can work from the second to the first parametrization. Verify this.</p>
 <ol style="list-style-type: decimal">
 <li>Derive an expression for the loglikelihood;</li>
 </ol>
