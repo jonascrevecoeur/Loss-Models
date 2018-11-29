@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Loss Models Exercises</title>
+  <title>Loss Models : a collection of computer labs in R</title>
   <meta name="description" content="Tutorials for the course of Loss Models">
   <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Loss Models Exercises" />
+  <meta property="og:title" content="Loss Models : a collection of computer labs in R" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Loss Models Exercises" />
+  <meta name="twitter:title" content="Loss Models : a collection of computer labs in R" />
   
   <meta name="twitter:description" content="Tutorials for the course of Loss Models" />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Katrien Antonio and Jonas Crevecoeur">
 
 
-<meta name="date" content="2018-11-27">
+<meta name="date" content="2018-11-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
   
   
 
-<link rel="next" href="claim-count-distributions.html">
+<link rel="next" href="simple-parametric-distributions-for-frequency-and-severity-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -102,37 +102,51 @@ $(document).ready(function() {
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a></li>
-<li class="chapter" data-level="2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html"><i class="fa fa-check"></i><b>2</b> Claim Count Distributions</a><ul>
-<li class="chapter" data-level="2.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#read-in-data"><i class="fa fa-check"></i><b>2.1</b> Read in data</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#determining-the-file-path"><i class="fa fa-check"></i><b>2.1.1</b> Determining the file path</a></li>
-<li class="chapter" data-level="2.1.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#importing-a-.txt-file"><i class="fa fa-check"></i><b>2.1.2</b> Importing a .txt file</a></li>
+<li class="chapter" data-level="2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html"><i class="fa fa-check"></i><b>2</b> Simple, parametric distributions for frequency and severity data</a><ul>
+<li class="chapter" data-level="2.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#the-exponential-distribution"><i class="fa fa-check"></i><b>2.1</b> The exponential distribution</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-data"><i class="fa fa-check"></i><b>2.1.1</b> Simulating data</a></li>
+<li class="chapter" data-level="2.1.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.1.2</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.1.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#data-visualization-with-ggplot"><i class="fa fa-check"></i><b>2.1.3</b> Data visualization with ggplot</a></li>
+<li class="chapter" data-level="2.1.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle"><i class="fa fa-check"></i><b>2.1.4</b> Maximum Likelihood Estimation (MLE)</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.2</b> Exploratory analysis</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#summary-statistics-disregarding-exposure"><i class="fa fa-check"></i><b>2.2.1</b> Summary statistics disregarding exposure</a></li>
-<li class="chapter" data-level="2.2.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#summary-statistics-taking-into-account-exposure"><i class="fa fa-check"></i><b>2.2.2</b> Summary statistics taking into account exposure</a></li>
-<li class="chapter" data-level="2.2.3" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#empirical-probability-distribution"><i class="fa fa-check"></i><b>2.2.3</b> Empirical probability distribution</a></li>
-<li class="chapter" data-level="2.2.4" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#the-a-b-0-class-of-distributions"><i class="fa fa-check"></i><b>2.2.4</b> The (a, b, 0) class of distributions</a></li>
+<li class="chapter" data-level="2.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#discrete-distributions"><i class="fa fa-check"></i><b>2.2</b> Discrete distributions</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-the-data"><i class="fa fa-check"></i><b>2.2.1</b> Simulating the data</a></li>
+<li class="chapter" data-level="2.2.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis-1"><i class="fa fa-check"></i><b>2.2.2</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="2.2.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle-1"><i class="fa fa-check"></i><b>2.2.3</b> Maximum Likelihood Estimation (MLE)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#comparing-fitted-models"><i class="fa fa-check"></i><b>2.2.4</b> Comparing fitted models</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#fitting-count-distributions"><i class="fa fa-check"></i><b>2.3</b> Fitting count distributions</a><ul>
-<li class="chapter" data-level="2.3.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#poisson"><i class="fa fa-check"></i><b>2.3.1</b> Poisson</a></li>
-<li class="chapter" data-level="2.3.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#negative-binomial"><i class="fa fa-check"></i><b>2.3.2</b> Negative binomial</a></li>
-<li class="chapter" data-level="2.3.3" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#modified-poisson-distributions"><i class="fa fa-check"></i><b>2.3.3</b> Modified Poisson distributions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#aic"><i class="fa fa-check"></i><b>2.4</b> AIC</a></li>
-<li class="chapter" data-level="2.5" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#replicating-data-sets"><i class="fa fa-check"></i><b>2.5</b> Replicating data sets</a><ul>
-<li class="chapter" data-level="2.5.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#poisson-1"><i class="fa fa-check"></i><b>2.5.1</b> Poisson</a></li>
-<li class="chapter" data-level="2.5.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#nb"><i class="fa fa-check"></i><b>2.5.2</b> NB</a></li>
-<li class="chapter" data-level="2.5.3" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#zip"><i class="fa fa-check"></i><b>2.5.3</b> ZIP</a></li>
-<li class="chapter" data-level="2.5.4" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#hurdle-poisson-1"><i class="fa fa-check"></i><b>2.5.4</b> Hurdle Poisson</a></li>
+<li class="chapter" data-level="3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html"><i class="fa fa-check"></i><b>3</b> Putting it all together: case study om modelling claim counts</a><ul>
+<li class="chapter" data-level="3.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#read-in-data"><i class="fa fa-check"></i><b>3.1</b> Read in data</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#determining-the-file-path"><i class="fa fa-check"></i><b>3.1.1</b> Determining the file path</a></li>
+<li class="chapter" data-level="3.1.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#importing-a-.txt-file"><i class="fa fa-check"></i><b>3.1.2</b> Importing a .txt file</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#mean-and-variance-of-the-estimated-zip-nb-hurdle-poisson"><i class="fa fa-check"></i><b>2.6</b> Mean and variance of the estimated ZIP, NB, Hurdle Poisson</a><ul>
-<li class="chapter" data-level="2.6.1" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#poisson-2"><i class="fa fa-check"></i><b>2.6.1</b> Poisson</a></li>
-<li class="chapter" data-level="2.6.2" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#nb-1"><i class="fa fa-check"></i><b>2.6.2</b> NB</a></li>
-<li class="chapter" data-level="2.6.3" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#zip-1"><i class="fa fa-check"></i><b>2.6.3</b> ZIP</a></li>
-<li class="chapter" data-level="2.6.4" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#hurdle-poisson-2"><i class="fa fa-check"></i><b>2.6.4</b> Hurdle Poisson</a></li>
-<li class="chapter" data-level="2.6.5" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#comparison-with-empirical-mean-and-variance"><i class="fa fa-check"></i><b>2.6.5</b> Comparison with empirical mean and variance</a></li>
+<li class="chapter" data-level="3.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#exploratory-analysis-2"><i class="fa fa-check"></i><b>3.2</b> Exploratory analysis</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#summary-statistics-disregarding-exposure"><i class="fa fa-check"></i><b>3.2.1</b> Summary statistics disregarding exposure</a></li>
+<li class="chapter" data-level="3.2.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#summary-statistics-taking-into-account-exposure"><i class="fa fa-check"></i><b>3.2.2</b> Summary statistics taking into account exposure</a></li>
+<li class="chapter" data-level="3.2.3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#empirical-probability-distribution"><i class="fa fa-check"></i><b>3.2.3</b> Empirical probability distribution</a></li>
+<li class="chapter" data-level="3.2.4" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#the-a-b-0-class-of-distributions"><i class="fa fa-check"></i><b>3.2.4</b> The (a, b, 0) class of distributions</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="claim-count-distributions.html"><a href="claim-count-distributions.html#conclusion"><i class="fa fa-check"></i><b>2.7</b> Conclusion</a></li>
+<li class="chapter" data-level="3.3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#fitting-count-distributions"><i class="fa fa-check"></i><b>3.3</b> Fitting count distributions</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#poisson"><i class="fa fa-check"></i><b>3.3.1</b> Poisson</a></li>
+<li class="chapter" data-level="3.3.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#negative-binomial-1"><i class="fa fa-check"></i><b>3.3.2</b> Negative binomial</a></li>
+<li class="chapter" data-level="3.3.3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#modified-poisson-distributions"><i class="fa fa-check"></i><b>3.3.3</b> Modified Poisson distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#aic-1"><i class="fa fa-check"></i><b>3.4</b> AIC</a></li>
+<li class="chapter" data-level="3.5" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#replicating-data-sets"><i class="fa fa-check"></i><b>3.5</b> Replicating data sets</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#poisson-1"><i class="fa fa-check"></i><b>3.5.1</b> Poisson</a></li>
+<li class="chapter" data-level="3.5.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#nb"><i class="fa fa-check"></i><b>3.5.2</b> NB</a></li>
+<li class="chapter" data-level="3.5.3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#zip"><i class="fa fa-check"></i><b>3.5.3</b> ZIP</a></li>
+<li class="chapter" data-level="3.5.4" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#hurdle-poisson-1"><i class="fa fa-check"></i><b>3.5.4</b> Hurdle Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#mean-and-variance-of-the-estimated-zip-nb-hurdle-poisson"><i class="fa fa-check"></i><b>3.6</b> Mean and variance of the estimated ZIP, NB, Hurdle Poisson</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#poisson-2"><i class="fa fa-check"></i><b>3.6.1</b> Poisson</a></li>
+<li class="chapter" data-level="3.6.2" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#nb-1"><i class="fa fa-check"></i><b>3.6.2</b> NB</a></li>
+<li class="chapter" data-level="3.6.3" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#zip-1"><i class="fa fa-check"></i><b>3.6.3</b> ZIP</a></li>
+<li class="chapter" data-level="3.6.4" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#hurdle-poisson-2"><i class="fa fa-check"></i><b>3.6.4</b> Hurdle Poisson</a></li>
+<li class="chapter" data-level="3.6.5" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#comparison-with-empirical-mean-and-variance"><i class="fa fa-check"></i><b>3.6.5</b> Comparison with empirical mean and variance</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="putting-it-all-together-case-study-om-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-om-modelling-claim-counts.html#conclusion"><i class="fa fa-check"></i><b>3.7</b> Conclusion</a></li>
 </ul></li>
 </ul>
 
@@ -143,7 +157,7 @@ $(document).ready(function() {
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Loss Models Exercises</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Loss Models : a collection of computer labs in R</a>
           </h1>
         </div>
 
@@ -152,13 +166,17 @@ $(document).ready(function() {
 
             <section class="normal" id="section-">
 <div id="header">
-<h1 class="title">Loss Models Exercises</h1>
+<h1 class="title">Loss Models : a collection of computer labs in R</h1>
 <h4 class="author"><em>Katrien Antonio and Jonas Crevecoeur</em></h4>
-<h4 class="date"><em>2018-11-27</em></h4>
+<h4 class="date"><em>2018-11-29</em></h4>
 </div>
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">1</span> Intro</h1>
-<p>This book contains tutorials for the course of Loss Models. These tutorials bridge the theory of the lectures and apply the contents of the course to realistic insurance applications.</p>
+<p>This book is a collection of computer labs that come with the course on Loss Models taught at KU Leuven by <a href="https://www.kuleuven.be/wieiswie/nl/person/00043788">Katrien Antonio</a> and <a href="https://www.kuleuven.be/wieiswie/nl/person/00110176">Jonas Crevecoeur</a>. The labs are inspired by the book Loss Models: from data to decsisions written by Stuart A. Klugman, Harry H. Panjer and Gordon E. Willmot and published by Wiley.</p>
+<center>
+<img src="https://s.s-bol.com/imgbase0/imagebase3/large/FC/6/0/9/9/9200000002219906.jpg" width="200px" />
+</center>
+<p>We assume basic knowledge of working with objects and data sets in R, writing functions and running optimizations.</p>
 
 </div>
             </section>
@@ -167,7 +185,7 @@ $(document).ready(function() {
         </div>
       </div>
 
-<a href="claim-count-distributions.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="simple-parametric-distributions-for-frequency-and-severity-data.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
