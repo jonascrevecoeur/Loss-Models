@@ -192,9 +192,9 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.1.3" data-path="simulation.html"><a href="simulation.html#expected-loss-with-a-deductible"><i class="fa fa-check"></i><b>4.1.3</b> Expected loss with a deductible</a></li>
 </ul></li>
 <li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#aggregate-loss"><i class="fa fa-check"></i><b>4.2</b> Aggregate loss</a></li>
-<li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#lifetime"><i class="fa fa-check"></i><b>4.3</b> Lifetime</a><ul>
+<li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#simulating-future-life-times-of-newborns"><i class="fa fa-check"></i><b>4.3</b> Simulating future life times of newborns</a><ul>
 <li class="chapter" data-level="4.3.1" data-path="simulation.html"><a href="simulation.html#importing-the-data"><i class="fa fa-check"></i><b>4.3.1</b> Importing the data</a></li>
-<li class="chapter" data-level="4.3.2" data-path="simulation.html"><a href="simulation.html#simulate-the-whole-lifetime"><i class="fa fa-check"></i><b>4.3.2</b> Simulate the whole lifetime</a></li>
+<li class="chapter" data-level="4.3.2" data-path="simulation.html"><a href="simulation.html#simulate-the-whole-life-time"><i class="fa fa-check"></i><b>4.3.2</b> Simulate the whole life time</a></li>
 <li class="chapter" data-level="4.3.3" data-path="simulation.html"><a href="simulation.html#simulate-the-future-lifetime"><i class="fa fa-check"></i><b>4.3.3</b> Simulate the future lifetime</a></li>
 <li class="chapter" data-level="4.3.4" data-path="simulation.html"><a href="simulation.html#visualize-the-data"><i class="fa fa-check"></i><b>4.3.4</b> Visualize the data</a></li>
 </ul></li>
@@ -218,10 +218,10 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="simulation" class="section level1">
 <h1><span class="header-section-number">4</span> Simulation</h1>
-<p>You will now focus on simulation methods. You will learn how to draw simulations from a specified, parametric distribution using the Probability Integral Transform (PIT) technique.</p>
+<p>You will now focus on simulation methods. You will first learn how to draw simulations from a specified, parametric distribution using the Probability Integral Transform (PIT) technique. Then, you will apply your insights to a real-life example where the future lifetimes of newborns are simulated using a recent life table published by Statistics Belgium.</p>
 <div id="severity" class="section level2">
 <h2><span class="header-section-number">4.1</span> Severity</h2>
-<p>In this tutorial you will simulate <span class="math inline">\(100\)</span> losses <span class="math inline">\(X\)</span> from a Pareto distribution with distribution function</p>
+<p>In this exercise you will simulate <span class="math inline">\(100\)</span> losses <span class="math inline">\(X\)</span> from a Pareto distribution with distribution function</p>
 <p><span class="math display">\[ F_X(x) = 1 - \left( \frac{1000}{1000 + x}\right)^3.\]</span></p>
 <p>You will use these simulated observations to calculate the expected loss with a deductible of <span class="math inline">\(300\)</span>, i.e. <span class="math inline">\(E[(X - 300)_+]\)</span>.</p>
 <div id="probability-integral-transform" class="section level3">
@@ -341,9 +341,9 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
 <p>The solution will become available after the assignment deadline.</p>
 </div>
 </div>
-<div id="lifetime" class="section level2">
-<h2><span class="header-section-number">4.3</span> Lifetime</h2>
-<p>In this tutorial you simulate the age of death for 10000 individuals based on the lifetable for Belgian males in 2017 published by <a href="https://statbel.fgov.be/en/themes/population/life-expectancy-and-life-tables">stabel</a>. You will use these simulations to construct a density plot of the lifetime distribution.</p>
+<div id="simulating-future-life-times-of-newborns" class="section level2">
+<h2><span class="header-section-number">4.3</span> Simulating future life times of newborns</h2>
+<p>In this exercise you simulate the age at death for 10000 newborns based on the lifetable for Belgian males in 2017 published by <a href="https://statbel.fgov.be/en/themes/population/life-expectancy-and-life-tables">stabel</a>. You will use these simulations to construct a histogram as well as a density plot of the lifetime distribution.</p>
 <div id="importing-the-data" class="section level3">
 <h3><span class="header-section-number">4.3.1</span> Importing the data</h3>
 <p>Download and save the file <a href="data/lifetableMaleBE2017.csv">lifetableMaleBE2017.csv</a> on your local drive. This file contains the columns <code>age</code> and <code>q</code>, where</p>
@@ -357,8 +357,8 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
 <p>The solution will become available after the assignment deadline.</p>
 </div>
 </div>
-<div id="simulate-the-whole-lifetime" class="section level3">
-<h3><span class="header-section-number">4.3.2</span> Simulate the whole lifetime</h3>
+<div id="simulate-the-whole-life-time" class="section level3">
+<h3><span class="header-section-number">4.3.2</span> Simulate the whole life time</h3>
 <p>First, you simulate the whole remaining lifetime <span class="math inline">\(K_0 = \lfloor{T_0} \rfloor\)</span> for a newborn. The whole lifetime is the integer age at which the newborn dies. You calculate the cdf of <span class="math inline">\(K_0\)</span> at integer ages <span class="math inline">\(x\)</span> as follows</p>
 <span class="math display">\[\begin{align*}
   P(K_0 \leq x) &amp;= P(T_0 &lt; x+1) \\
@@ -396,7 +396,7 @@ The probability of surviving beyond age $x$ is given by
 <pre><code>## [1]   2   6  30 210</code></pre>
 <p>The Figure below shows the CDF of the whole lifetime <span class="math inline">\(K_0\)</span> for a newborn. Since <span class="math inline">\(K_0\)</span> is a discrete random variable this CDF is a step function.</p>
 <p><img src="_main_files/figure-html/simulation_cdf_whole_lifetime-1.png" width="672" /></p>
-<p>The following theorem presents a strategy for simulating from a discrete distribution given its CDF.</p>
+<p>The following Theorem presents a strategy for simulating from a discrete distribution given its CDF.</p>
 <blockquote>
 <p>Given a CDF <span class="math inline">\(F_X\)</span> of a discrete distribution with possible outcomes <span class="math inline">\(x_1, \ldots, x_n\)</span> and a uniformly distributed random variable <span class="math inline">\(U\)</span> on <span class="math inline">\([0, 1]\)</span>. Then <span class="math inline">\(F_X\)</span> is the CDF of the random variable <span class="math inline">\(X = \max_{x_i} \{ F_X(x_i) \leq U \}\)</span>.</p>
 </blockquote>
@@ -440,7 +440,7 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
   K[i] &lt;-<span class="st"> </span>???
 }</code></pre></div>
 <ol start="4" style="list-style-type: decimal">
-<li>Use <code>ggplot</code> to create a histogram of your simulation for the whole lifetime. See <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_histogram</code></a>.</li>
+<li>Use <code>ggplot</code> to create a histogram of your simulation for the whole life time. See <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_histogram</code></a>.</li>
 </ol>
 <p><img src="_main_files/figure-html/simulation_histogram_whole_lifetime-1.png" width="672" /></p>
 <div class="fold s">
@@ -449,8 +449,8 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
 </div>
 <div id="simulate-the-future-lifetime" class="section level3">
 <h3><span class="header-section-number">4.3.3</span> Simulate the future lifetime</h3>
-<p>You will now simulate the exact (instead of integer) remaining lifetime <span class="math inline">\(T_0\)</span> of a newborn. Note that <span class="math inline">\(T_0\)</span> can be written as (explain!) <span class="math inline">\(T_0 = \lfloor T_0 \rfloor + (T_0-\lfloor T_0 \rfloor)\)</span>. You will need to make an assumption regarding the probability of dying at non-integer ages. You assume a constant force of mortality between integer ages, i.e.</p>
-<p><span class="math display">\[ P(T_0 \leq t + x \mid T_0 &gt; x) = 1 - \exp(-\mu_x \cdot t), \quad \text{for} \quad x \in \mathbb{N} \quad \text{and} \quad t \in [0, 1)\]</span> for some intensity of dying at age <span class="math inline">\(x\)</span> <span class="math inline">\(\mu_x\)</span>. More insight behind this assumption will be given in the courses on Life Insurance Mathematics and Advanced Life Insurance Mathematics. The intensity <span class="math inline">\(\mu_x\)</span> can be found by taking <span class="math inline">\(t = 1\)</span> in the above expression,</p>
+<p>You will now simulate the exact (instead of integer) remaining lifetime <span class="math inline">\(T_0\)</span> of a newborn. Note that <span class="math inline">\(T_0\)</span> can be written as (explain!) <span class="math inline">\(T_0 = \lfloor T_0 \rfloor + (T_0-\lfloor T_0 \rfloor)\)</span> where <span class="math inline">\(\lfloor T_0 \rfloor \in \mathbb{N}\)</span> and <span class="math inline">\((T_0-\lfloor T_0 \rfloor) \in [0,1)\)</span>. You will need to make an assumption regarding the probability of dying at non-integer ages. You assume a constant force of mortality between integer ages, i.e.</p>
+<p><span class="math display">\[ P(T_0 \leq t + x \mid T_0 &gt; x) = 1 - \exp(-\mu_x \cdot t), \quad \text{for} \quad x \in \mathbb{N} \quad \text{and} \quad t \in [0, 1)\]</span> for some intensity <span class="math inline">\(\mu_x\)</span> of dying at age <span class="math inline">\(x\)</span>. More insight behind this assumption will be given in the courses on Life Insurance Mathematics and Advanced Life Insurance Mathematics. The intensity <span class="math inline">\(\mu_x\)</span> can be found by taking <span class="math inline">\(t = 1\)</span> in the above expression,</p>
 <p><span class="math display">\[ 1 - \exp(-\mu_x) = P(T_0 \leq 1 + x \mid T_0 &gt; x) = q_x, \]</span> from which</p>
 <p><span class="math display">\[ \mu_x = -\log(1-q_x).\]</span></p>
 <p>From this you compute the distribution of <span class="math inline">\(T_0 - K_0 \mid K_0 = x\)</span>,</p>
@@ -476,7 +476,7 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
 </div>
 <div id="visualize-the-data" class="section level3">
 <h3><span class="header-section-number">4.3.4</span> Visualize the data</h3>
-<p>Visualize the density of the remaining lifetime <span class="math inline">\(T_0\)</span> of a newborn with <code>ggplot</code>.</p>
+<p>Visualize the density of the remaining life time <span class="math inline">\(T_0\)</span> of a newborn with <code>ggplot</code>.</p>
 <p><img src="_main_files/figure-html/simulation_density_lifetime-1.png" width="672" /></p>
 <div class="fold s">
 <p>The solution will become available after the assignment deadline.</p>
