@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Loss Models : a collection of computer labs in R</title>
+  <title>4 Simulation | Loss Models : a collection of computer labs in R</title>
   <meta name="description" content="Tutorials for the course of Loss Models">
-  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="Loss Models : a collection of computer labs in R" />
+  <meta property="og:title" content="4 Simulation | Loss Models : a collection of computer labs in R" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Loss Models : a collection of computer labs in R" />
+  <meta name="twitter:title" content="4 Simulation | Loss Models : a collection of computer labs in R" />
   
   <meta name="twitter:description" content="Tutorials for the course of Loss Models" />
   
@@ -25,7 +25,7 @@
 <meta name="author" content="Katrien Antonio and Jonas Crevecoeur">
 
 
-<meta name="date" content="2018-12-05">
+<meta name="date" content="2019-01-04">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -36,6 +36,7 @@
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
@@ -247,7 +248,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Calculate <span class="math inline">\(F_X^{-1}(u)\)</span>.</li>
 </ol>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @1. </span>
+n &lt;-<span class="st"> </span><span class="dv">100</span>;
+u &lt;-<span class="st"> </span><span class="kw">runif</span>(n, <span class="dv">0</span>, <span class="dv">1</span>)
+
+
+<span class="co"># @2.</span>
+cdf.inverse &lt;-<span class="st"> </span><span class="cf">function</span>(y)
+{
+  <span class="kw">return</span>(<span class="dv">1000</span> <span class="op">/</span><span class="st"> </span>(<span class="dv">1</span><span class="op">-</span>y)<span class="op">^</span>{<span class="dv">1</span><span class="op">/</span><span class="dv">3</span>} <span class="op">-</span><span class="st"> </span><span class="dv">1000</span>)
+}
+
+<span class="co"># @3.</span>
+sim &lt;-<span class="st"> </span><span class="kw">cdf.inverse</span>(u)</code></pre></div>
 </div>
 </div>
 <div id="visualization" class="section level3">
@@ -290,7 +303,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li>Calculate <span class="math inline">\(E(X-300)_+\)</span> for your simulated vector.</li>
 </ol>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">deductible &lt;-<span class="st"> </span><span class="cf">function</span>(x, d)
+{
+  <span class="kw">return</span>(<span class="kw">pmax</span>(x<span class="op">-</span>d, <span class="dv">0</span>))
+}
+
+<span class="kw">mean</span>(<span class="kw">deductible</span>(sim, <span class="dv">300</span>))</code></pre></div>
+<pre><code>## [1] 338.2573</code></pre>
 </div>
 </div>
 </div>
@@ -338,7 +357,79 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
 <li>Adapt the code in 3. to calculate the expected loss per policy when there is an ordinary deductible of <span class="math inline">\(0.2\)</span>.</li>
 </ol>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @1</span>
+n &lt;-<span class="st"> </span><span class="dv">10000</span>
+nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
+
+<span class="co"># @2</span>
+cdf.inverse &lt;-<span class="st"> </span><span class="cf">function</span>(x)
+{
+  <span class="kw">return</span>(<span class="kw">sqrt</span>(x))
+}
+
+simulate &lt;-<span class="st"> </span><span class="cf">function</span>(n)
+{
+  u &lt;-<span class="st"> </span><span class="kw">runif</span>(n)
+  <span class="kw">return</span>(<span class="kw">cdf.inverse</span>(u));
+}
+
+<span class="co"># @3</span>
+n &lt;-<span class="st"> </span><span class="dv">10000</span>
+nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
+
+<span class="co"># create an empty vector to store the aggregated loss</span>
+aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, n)
+  
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n)
+{
+  <span class="co"># the claims for the i-th contract</span>
+  claims &lt;-<span class="st"> </span><span class="kw">simulate</span>(nclaim[i])
+  
+  <span class="co"># without deductible the aggregated loss is the sum of the individual claims</span>
+  aggregated.loss[i] &lt;-<span class="st"> </span><span class="kw">sum</span>(claims)
+}
+  
+<span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
+<span class="kw">mean</span>(aggregated.loss)</code></pre></div>
+<pre><code>## [1] 1.341797</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @4</span>
+n &lt;-<span class="st"> </span><span class="dv">10000</span>
+nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
+
+<span class="co"># create an empty vector to store the aggregated loss</span>
+aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, n)
+  
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n)
+{
+  <span class="co"># the claims for the i-th contract</span>
+  claims &lt;-<span class="st"> </span><span class="kw">simulate</span>(nclaim[i])
+  
+  <span class="co"># without deductible the aggregated loss is the sum of the individual claims</span>
+  aggregated.loss[i] &lt;-<span class="st"> </span><span class="kw">sum</span>(claims)
+}
+  
+<span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
+<span class="kw">mean</span>(<span class="kw">pmax</span>(aggregated.loss <span class="op">-</span><span class="st"> </span><span class="fl">0.2</span>, <span class="dv">0</span>))</code></pre></div>
+<pre><code>## [1] 1.168917</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @5</span>
+n &lt;-<span class="st"> </span><span class="dv">10000</span>
+nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
+
+<span class="co"># create an empty vector to store the aggregated loss</span>
+aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, n)
+  
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>n)
+{
+  <span class="co"># the claims for the i-th contract</span>
+  claims &lt;-<span class="st"> </span><span class="kw">pmax</span>(<span class="kw">simulate</span>(nclaim[i]) <span class="op">-</span><span class="st"> </span><span class="fl">0.2</span>, <span class="dv">0</span>)
+  
+  <span class="co"># without deductible the aggregated loss is the sum of the individual claims</span>
+  aggregated.loss[i] &lt;-<span class="st"> </span><span class="kw">sum</span>(claims)
+}
+  
+<span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
+<span class="kw">mean</span>(aggregated.loss)</code></pre></div>
+<pre><code>## [1] 0.9508734</code></pre>
 </div>
 </div>
 <div id="simulating-future-life-times-of-newborns" class="section level2">
@@ -354,7 +445,11 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
 <li>Create variables <code>age</code> and <code>q</code> which store the corresponding variables from the dataset.</li>
 </ol>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">setwd</span>(<span class="st">&#39;C:/Users/u0110176/Dropbox/Verzekeringen niet-leven/Bookdown/&#39;</span>)
+data &lt;-<span class="st"> </span><span class="kw">read.table</span>(<span class="st">&#39;data/lifetableMaleBE2017.csv&#39;</span>, <span class="dt">sep =</span> <span class="st">&#39;;&#39;</span>, <span class="dt">header =</span> <span class="ot">TRUE</span>)
+
+age &lt;-<span class="st"> </span>data<span class="op">$</span>age;
+q &lt;-<span class="st"> </span>data<span class="op">$</span>q;</code></pre></div>
 </div>
 </div>
 <div id="simulate-the-whole-life-time" class="section level3">
@@ -444,7 +539,37 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
 </ol>
 <p><img src="_main_files/figure-html/simulation_histogram_whole_lifetime-1.png" width="672" /></p>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">cdf &lt;-<span class="st"> </span><span class="dv">1</span> <span class="op">-</span><span class="st"> </span><span class="kw">cumprod</span>(<span class="dv">1</span><span class="op">-</span>q)
+
+nsim &lt;-<span class="st"> </span><span class="dv">10000</span>
+K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</span>, nsim)
+
+simulWholeAge &lt;-<span class="st"> </span><span class="cf">function</span>()
+{
+  u &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>);
+  
+  <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(cdf))
+  {
+    <span class="cf">if</span>(u <span class="op">&lt;</span><span class="st"> </span>cdf[j])
+    {
+      <span class="kw">return</span>(j<span class="op">-</span><span class="dv">1</span>);
+    }
+  }
+}
+
+<span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="op">:</span>nsim)
+{
+  K[i] &lt;-<span class="st"> </span><span class="kw">simulWholeAge</span>();
+}
+
+
+<span class="kw">ggplot</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="kw">aes</span>(K), <span class="dt">col =</span> <span class="st">&quot;#99CCFF&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#99CCFF&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Histogram lifetime male, Belgium 2017&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">xlab</span>(<span class="st">&#39;age&#39;</span>)</code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/simulattion_whole_lifetime_solution-1.png" width="672" /></p>
 </div>
 </div>
 <div id="simulate-the-future-lifetime" class="section level3">
@@ -471,7 +596,11 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
 <li><p>Add the simulations from <span class="math inline">\(K_0\)</span> and <span class="math inline">\(T_0-K_0 \mid K_0\)</span> to obtain simulations for the remaining lifetime <span class="math inline">\(T_0\)</span> of a newborn.</p></li>
 </ol>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @2</span>
+u &lt;-<span class="st"> </span><span class="kw">runif</span>(nsim)
+remainder &lt;-<span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span> <span class="op">-</span><span class="st"> </span>q[K<span class="op">+</span><span class="dv">1</span>] <span class="op">*</span><span class="st"> </span>u) <span class="op">/</span><span class="st"> </span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>q[K<span class="op">+</span><span class="dv">1</span>])
+
+sim &lt;-<span class="st"> </span>K <span class="op">+</span><span class="st"> </span>remainder</code></pre></div>
 </div>
 </div>
 <div id="visualize-the-data" class="section level3">
@@ -479,7 +608,11 @@ K &lt;-<span class="st"> </span><span class="kw">rep</span>(<span class="dv">0</
 <p>Visualize the density of the remaining life time <span class="math inline">\(T_0\)</span> of a newborn with <code>ggplot</code>.</p>
 <p><img src="_main_files/figure-html/simulation_density_lifetime-1.png" width="672" /></p>
 <div class="fold s">
-<p>The solution will become available after the assignment deadline.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(sim), <span class="dt">col =</span> <span class="st">&quot;#99CCFF&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;#99CCFF&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">ggtitle</span>(<span class="st">&quot;Density lifetime male, Belgium 2017&quot;</span>)</code></pre></div>
+<p><img src="_main_files/figure-html/simulation_density_lifetime_solution-1.png" width="672" /></p>
 </div>
 
 </div>
@@ -511,7 +644,7 @@ gitbook.start({
 "google": false,
 "linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
 "all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
 },
@@ -521,6 +654,10 @@ gitbook.start({
 "size": 2
 },
 "edit": {
+"link": null,
+"text": null
+},
+"history": {
 "link": null,
 "text": null
 },
@@ -538,7 +675,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "";
-    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:" && /^https?:/.test(src))
       src = src.replace(/^https?:/, '');
     script.src = src;
