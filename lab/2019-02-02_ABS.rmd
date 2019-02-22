@@ -6,7 +6,7 @@ draft: false
 slug: "ABS"
 author: "Katrien Antonio" 
 title: " "
-image: "lab/img/mainImages/uva_abs.png"
+image: "lab/img/mainImages/UvA_ABS.png"
 description: "Amsterdam Business School at University of Amsterdam."
 tags: [
   "UvA",

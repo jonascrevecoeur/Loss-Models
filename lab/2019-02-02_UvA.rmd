@@ -6,7 +6,7 @@ draft: false
 slug: "UvA"
 author: "Katrien Antonio" 
 title: " "
-image: "lab/img/mainImages/uva_feb.png"
+image: "lab/img/mainImages/UvA_FEB.png"
 description: "Faculty of Economics and Business at University of Amsterdam."
 tags: [
   "UvA",
