@@ -1,0 +1,27 @@
+---
+date: "2019-02-02"
+type: "post"
+showonlyimage: false
+draft: false
+slug: "loss models"
+author: "Katrien Antonio" 
+title: "Loss Models"
+image: "projects/img/mainImages/insurance_losses.png"
+description: "Research papers on modelling insurance losses."
+tags: [
+"loss models"
+]
+keywords: [
+"loss models"
+]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+```{r, include = FALSE}
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
+```
+
+

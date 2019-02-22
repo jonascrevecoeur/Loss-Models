@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Teaching on Katrien Antonio</title>
+    <link>/teaching/</link>
+    <description>Recent content in Teaching on Katrien Antonio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/teaching/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MSc of Actuarial and Financial Engineering</title>
+      <link>/teaching/mafe/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/mafe/</guid>
+      <description>The MSc of Actuarial and Financial Engineering is an English taught MSc program of 120 ects, offered jointly by the Faculty of Economics and Business and the Faculty of Science at KU Leuven. The program prepares students for careers in actuarial science, financial engineering or quantitative risk management within financial institutions. I serve as the program director of this MSc program, since academic year 2018-2019.Find out more on the program website, the official KU Leuven page or in the brochure!</description>
+    </item>
+    
+    <item>
+      <title>Teaching portfolio</title>
+      <link>/teaching/portfolio/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/portfolio/</guid>
+      <description>This page gives an overview of my current and former affiliations, my visiting positions, and the courses in my teaching portfolio.KU Leuven, BelgiumFaculty of Economics and BusinessI am professor in actuarial science and insurance analytics at KU Leuven, Faculty of Economics and Business, Research Group Accounting, Finance and Insurance.At KU Leuven I coordinate and teach the courses:
+Loss Models. This is a 6 ects course that equips students with the basic tools necessary for the construction, estimation and interpretation of quantitative risk models, with a particular focus on the frequency - severity approach typical for general insurance loss models.</description>
+    </item>
+    
+    <item>
+      <title>DataCamp course</title>
+      <link>/teaching/datacamp/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/datacamp/</guid>
+      <description>Together with dr. Roel Verbelen I developed the DataCamp online course on Valuation of Life Insurance Products in R. The course covers 17 videos and 55 exercises organized in 4 chapters: valuation of cash flows, life tables, life annuities and life insurances.Free registration of your classroom by completing this form. DataCamp is 100% free when you need it for your classroom. Even the premium content! Sign up your classroom and use our course on life insurance as computer tutorials.</description>
+    </item>
+    
+    <item>
+      <title>In company courses</title>
+      <link>/teaching/in-company/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/teaching/in-company/</guid>
+      <description>Happy learning!</description>
+    </item>
+    
+  </channel>
+</rss>
