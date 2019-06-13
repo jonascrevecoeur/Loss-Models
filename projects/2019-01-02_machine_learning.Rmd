@@ -1,24 +1,25 @@
 ---
-date: "2019-02-17"
-type: "post"
-showonlyimage: false
-draft: false
-slug: "machine learning"
-author: "Katrien Antonio" 
 title: "Machine learning for insurance pricing"
-image: "projects/img/mainImages/machine_learning.jpg"
-description: "Research papers on insurance pricing with machine learning methods"
-tags: [
-"pricing models", "machine learning"
-]
-keywords: [
-"loss models", "machine learning"
-]
+author: "Katrien Antonio"
+date: '2019-06-13'
+draft: no
+image: projects/img/mainImages/machine_learning.jpg
+keywords:
+- loss models
+- machine learning
+showonlyimage: no
+slug: machine learning
+tags:
+- pricing models
+- machine learning
+description: Research papers on insurance pricing with machine learning methods
+type: post
 ---
 
 <p align="justify">An overview of published and ongoing research papers within the **machine learning for pricing** research line developed in my lab. This research line puts focus on:</p> 
 
-- [data driven strategies to handle continuous and spatial risk factors](#data-driven) 
+- [data driven strategies to handle continuous and spatial risk factors](#data-driven)
+- [sparse regression with automatic feature selection and binning](#SMuRF)
 - [tree-based machine learning techniques for pricing](#tree-based-pricing).
 
 ***
@@ -29,32 +30,15 @@ Watch Roel Henckaerts presenting our paper on tree-based machine learning during
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z1AlNGXGz9A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-***
-###### {#data-driven}
-><p align="justify">**A data driven binning strategy for the construction of insurance tariff classes**
-</br> </br>
-<u class="dotted">Collaborators:</u> Roel Henckaerts, Katrien Antonio, Maxime Clijsters and Roel Verbelen.
-</br> </br>
-<u class="dotted">Journal paper:</u> <a href="https://www.tandfonline.com/doi/full/10.1080/03461238.2018.1429300"target="_blank">Scandinavian Actuarial Journal, in press</a>
-</br> </br>
-<u class="dotted">Working paper:</u> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3052174"target="_blank">Working paper on SSRN</a> 
-</br> </br>
-<u class="dotted">Abstract.</u> We present a **fully data driven strategy to incorporate continuous risk factors and geographical information in an insurance tariff**. A framework is developed that aligns flexibility with the practical requirements of an insurance company, the policyholder and the regulator. Our strategy is illustrated with an example from property and casualty (P&C) insurance, namely a motor insurance case study. We start by fitting generalized additive models (GAMs) to the number of reported claims and their corresponding severity. These models allow for flexible statistical modeling in the presence of different types of risk factors: categorical, continuous, and spatial risk factors. The goal is **to bin the continuous and spatial risk factors such that categorical risk factors result which captures the effect of the covariate on the response in an accurate way, while being easy to use in a generalized linear model (GLM)**. This is in line with the requirement of an insurance company to construct a practical and interpretable tariff that can be explained easily to stakeholders. We propose to bin the spatial risk factor using Fisher’s natural breaks algorithm and the continuous risk factors using evolutionary trees. GLMs are fitted to the claims data with the resulting categorical risk factors. We find that the resulting GLMs approximate the original GAMs closely, and lead to a very similar premium structure.
-</br> </br> 
-An **R workshop** that explains and demonstrates the main findings of the paper is available as in company training.
-</p>
-
-***
-
 ###### {#tree-based-pricing}
-><p align="justify">**Boosting insurance tariff plans with insights from tree-based
+><p align="justify">**Boosting insights in insurance tariff plans with tree-based
 machine learning methods**
 </br> </br>
 <u class="dotted">Collaborators:</u> Roel Henckaerts, Katrien Antonio, Marie-Pier Côté and Roel Verbelen. 
 </br> </br>
-<u class="dotted">Journal paper:</u> in progress
+<u class="dotted">Journal paper:</u> submitted
 </br> </br>
-<u class="dotted">Working paper:</u> in progress
+<u class="dotted">Working paper:</u> <a href="https://arxiv.org/abs/1904.10890"target="_blank">Working paper on arxiv</a> 
 </br> </br>
 <u class="dotted">Presentations:</u> UseR!2018, IME Sydney 2018, EAJ Leuven 2018, Cass & KU Leuven symposium 2019.
 </br> </br>
@@ -78,3 +62,36 @@ guard against potential adverse selection risks.
 </p>
 
 ***
+
+###### {#SMuRF}
+><p align="justify">**Sparse Regression with Multi-type Regularized Feature Modeling**
+</br> </br>
+<u class="dotted">Collaborators:</u> Sander Devriendt, Katrien Antonio, Tom Reynkens and Roel Verbelen.
+</br> </br>
+<u class="dotted">Journal paper:</u> submitted
+</br> </br>
+<u class="dotted">Working paper:</u> <a href="https://arxiv.org/abs/1810.03136"target="_blank">Working paper on arxiv</a> 
+</br> </br>
+<u class="dotted">Abstract.</u> Within the statistical and machine learning literature, **regularization** techniques are often used to construct sparse (predictive) models. Most regularization strategies only work for data where all predictors are of the same type, such as Lasso regression for continuous predictors. However, many predictive problems involve **different predictor types**. We propose **a multi-type Lasso penalty** that acts on the objective function as a sum of subpenalties, one for each predictor type. As such, we perform predictor selection and level fusion within a predictor in a data-driven way, simultaneous with the parameter estimation process. We develop a new estimation strategy for convex predictive models with this multi-type penalty. Using the **theory of proximal operators**, our estimation procedure is computationally efficient, partitioning the overall optimization problem into easier to solve subproblems, specific for each predictor type and its associated penalty. The proposed SMuRF algorithm improves on existing solvers in both accuracy and computational efficiency. This is demonstrated with an extensive simulation study and the analysis of a case-study on **insurance pricing analytics**. 
+</br> </br> 
+An **R package** that accompanies the paper is available on <a href="https://cran.r-project.org/web/packages/smurf/index.html"target="_blank">CRAN</a>.
+</p>
+
+***
+###### {#data-driven}
+><p align="justify">**A data driven binning strategy for the construction of insurance tariff classes**
+</br> </br>
+<u class="dotted">Collaborators:</u> Roel Henckaerts, Katrien Antonio, Maxime Clijsters and Roel Verbelen.
+</br> </br>
+<u class="dotted">Journal paper:</u> <a href="https://www.tandfonline.com/doi/full/10.1080/03461238.2018.1429300"target="_blank">Scandinavian Actuarial Journal, Volume 8, 681-705, 2018</a>
+</br> </br>
+<u class="dotted">Working paper:</u> <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3052174"target="_blank">Working paper on SSRN</a> 
+</br> </br>
+<u class="dotted">Abstract.</u> We present a **fully data driven strategy to incorporate continuous risk factors and geographical information in an insurance tariff**. A framework is developed that aligns flexibility with the practical requirements of an insurance company, the policyholder and the regulator. Our strategy is illustrated with an example from property and casualty (P&C) insurance, namely a motor insurance case study. We start by fitting generalized additive models (GAMs) to the number of reported claims and their corresponding severity. These models allow for flexible statistical modeling in the presence of different types of risk factors: categorical, continuous, and spatial risk factors. The goal is **to bin the continuous and spatial risk factors such that categorical risk factors result which captures the effect of the covariate on the response in an accurate way, while being easy to use in a generalized linear model (GLM)**. This is in line with the requirement of an insurance company to construct a practical and interpretable tariff that can be explained easily to stakeholders. We propose to bin the spatial risk factor using Fisher’s natural breaks algorithm and the continuous risk factors using evolutionary trees. GLMs are fitted to the claims data with the resulting categorical risk factors. We find that the resulting GLMs approximate the original GAMs closely, and lead to a very similar premium structure.
+</br> </br> 
+An **R workshop** that explains and demonstrates the main findings of the paper is available as in company training.
+</p>
+
+***
+
+

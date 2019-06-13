@@ -6,18 +6,18 @@
     <description>Recent content in Social Networks on Katrien Antonio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/social-networks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Insurance fraud analytics</title>
-      <link>/projects/2019/02/08/fraud/</link>
-      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+      <link>/projects/2019/06/13/fraud/</link>
+      <pubDate>Thu, 13 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/projects/2019/02/08/fraud/</guid>
-      <description>An overview of published and ongoing research papers within the insurance fraud research line developed in my lab.Fraud detection in insurance with social network analytics Collaborators: María Óskarsdóttir, Katrien Antonio, Bart Baesens and Tom Reynkens, research in the framework of the Ageas CE Research Chair. Presentations: EAJ Leuven 2018, Cass &amp;amp; KU Leuven symposium 2019, IME Munchen 2019 (submitted), Insurance Data Science 2019 (ETH, submitted) Abstract.</description>
+      <guid>/projects/2019/06/13/fraud/</guid>
+      <description>An overview of published and ongoing research papers within the insurance fraud research line developed in my lab.Fraud detection in insurance with social network analytics Collaborators: María Óskarsdóttir, Katrien Antonio, Bart Baesens and Tom Reynkens, research in the framework of the Ageas CE Research Chair. Presentations: EAJ Leuven 2018, Cass &amp;amp; KU Leuven symposium 2019, Insurance Data Science 2019 (ETH), IME Munchen 2019. Abstract.</description>
     </item>
     
   </channel>

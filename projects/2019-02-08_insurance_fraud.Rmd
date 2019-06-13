@@ -1,5 +1,5 @@
 ---
-date: '2019-02-08'
+date: '2019-06-13'
 type: "post"
 showonlyimage: false
 draft: false
@@ -27,7 +27,7 @@ keywords: [
 </br> </br>
 <u class="dotted">Collaborators:</u> María Óskarsdóttir, Katrien Antonio, Bart Baesens and Tom Reynkens, research in the framework of the Ageas CE Research Chair. 
 </br> </br>
-<u class="dotted">Presentations:</u> EAJ Leuven 2018, Cass & KU Leuven symposium 2019, IME Munchen 2019 (submitted), Insurance Data Science 2019 (ETH, submitted)
+<u class="dotted">Presentations:</u> EAJ Leuven 2018, Cass & KU Leuven symposium 2019, Insurance Data Science 2019 (ETH), IME Munchen 2019.
 </br> </br>
 <u class="dotted">Abstract.</u> Fraud occurs in the insurance industry, for example, when policyholders file exaggerated or
 fictitious claims. Such fraudulent cases are often the result of organized schemes carried out

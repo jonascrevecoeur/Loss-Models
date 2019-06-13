@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/projects/2019/02/17/machine-learning/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <loc>/projects/2019/06/13/fraud/</loc>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/2019/06/13/machine-learning/</loc>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -15,11 +20,6 @@
   <url>
     <loc>/projects/2019/02/10/reserving/</loc>
     <lastmod>2019-02-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/2019/02/08/fraud/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -180,7 +180,7 @@
   
   <url>
     <loc>/tags/fraud-analytics/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,13 +196,13 @@
   
   <url>
     <loc>/tags/insurance/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -232,7 +232,7 @@
   
   <url>
     <loc>/tags/machine-learning/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -268,13 +268,13 @@
   
   <url>
     <loc>/tags/pricing-models/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/projects/</loc>
-    <lastmod>2019-02-17T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -298,7 +298,7 @@
   
   <url>
     <loc>/tags/social-networks/</loc>
-    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
