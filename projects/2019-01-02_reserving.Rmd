@@ -1,23 +1,21 @@
 ---
-date: '2019-02-10'
-type: "post"
-showonlyimage: false
-draft: false
-slug: "reserving"
-author: "Katrien Antonio" 
 title: "Loss reserving"
-image: "projects/img/mainImages/IBNR.png"
-description: "Research papers on loss reserving for general insurance."
-tags: [
- "IBNR",
- "RBNS",
- "reserving"
-]
-keywords: [
- "IBNR",
- "RBNS",
- "reserving"
-]
+author: "Katrien Antonio"
+date: '2019-09-28'
+draft: no
+image: projects/img/mainImages/IBNR.png
+keywords:
+- IBNR
+- RBNS
+- reserving
+showonlyimage: no
+slug: reserving
+tags:
+- IBNR
+- RBNS
+- reserving
+description: Research papers on loss reserving for general insurance.
+type: post
 ---
 <p align="justify">An overview of published and ongoing research papers within the *loss or claims reserving* research line developed in my lab. This research line puts focus on</p> 
 
@@ -30,7 +28,7 @@ keywords: [
 
 ><p align="justify">**Individual reserving with claim specific covariates**
 </br> </br>
-<u class="dotted">Collaborators:</u> Jonas Crevecoeur, Katrien Antonio and Roel Verbelen, research in the framework of the Argenta Research Chair. 
+<u class="dotted">Collaborators:</u> Jonas Crevecoeur and Katrien Antonio, research in the framework of the Argenta Research Chair. 
 </br> </br>
 <u class="dotted">Journal paper:</u> in progress
 </br> </br>
@@ -58,13 +56,13 @@ reserving methodology. We illustrate our method on a case study of a real life i
 
 ***
 ><p align="justify">**Modeling the number of hidden events
-subject to observation delay.**
+subject to observation delay** 
 </br> </br>
 <u class="dotted">Collaborators:</u> Jonas Crevecoeur, Katrien Antonio and Roel Verbelen, research in the framework of the Argenta Research Chair. 
 </br> </br>
-<u class="dotted">Journal paper:</u> R&R EJOR 
+<u class="dotted">Journal paper:</u> <a href="https://www.sciencedirect.com/science/article/abs/pii/S0377221719301924"target="_blank">European Journal of Operational Research, 277(3), 930-944, 2019</a> 
 </br> </br>
-<u class="dotted">Working paper:</u> 
+<u class="dotted">Working paper:</u> <a href="https://arxiv.org/abs/1801.02935"target="_blank">Working paper on arxiv</a> 
 </br> </br>
 <u class="dotted">Abstract.</u> This paper considers the problem of predicting the number of events that have occurred in the past, but which are not yet observed due to a delay. Such delayed events are relevant
 in predicting the future cost of warranties, pricing maintenance contracts, determining
@@ -80,13 +78,13 @@ the occurrence of an accident is reported to the insurer with delay.
 
 ***
 
-><p align="justify">**An EM algorithm to model the occurrence of claims subject to a reporting delay.**
+><p align="justify">**Modeling the occurrence of events subject to a reporting delay via an EM algorithm**
 </br> </br>
 <u class="dotted">Collaborators:</u> Roel Verbelen, Katrien Antonio, Jonas Crevecoeur and Gerda Claeskens.
 </br> </br>
 <u class="dotted">Journal paper:</u> submitted
 </br> </br>
-<u class="dotted">Working paper:</u> 
+<u class="dotted">Working paper:</u> <a href="https://arxiv.org/abs/1909.08336"target="_blank">Working paper on arxiv</a> 
 </br> </br>
 Insurance companies need to hold capital to be able to fulfill future liabilities with respect to
 the policies they write. Due to the delay in the reporting of claims, not all of the claims that
