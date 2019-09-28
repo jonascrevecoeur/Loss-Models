@@ -6,10 +6,37 @@
     <description>Recent content on Katrien Antonio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Lab members</title>
+      <link>/lab/lab-members/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/lab/lab-members/</guid>
+      <description>At KU Leuven my lab puts focus on research projects covering a range of topics frominsurance analytics. This page gives an overview of: my current PhD students and postdocs, as well as former PhD students and former postdocs. Interested in a PhD or postdoc position in the lab, please drop me a message!PhD students:Jonas Crevecoeur. Jonas holds the degrees of MSc in Mathematics, MSc in Insurance Studies and MSc in Financial and Actuarial Engineering (KU Leuven).</description>
+    </item>
+    
+    <item>
+      <title>Loss modelling analytics</title>
+      <link>/projects/2019/09/28/loss-models/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019/09/28/loss-models/</guid>
+      <description>An overview of published research papers within the loss modelling analytics research line developed in my lab. This research line puts focus onmixture models for a global fit of attritional lossesspliced models for a global fit of both attritional and large losses.Modelling censored losses using splicing: a global fit strategy with mixed Erlang and extreme value distributions Collaborators: Tom Reynkens, Roel Verbelen, Jan Beirlant and Katrien Antonio.</description>
+    </item>
+    
+    <item>
+      <title>Loss reserving</title>
+      <link>/projects/2019/09/28/reserving/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019/09/28/reserving/</guid>
+      <description>An overview of published and ongoing research papers within the loss or claims reserving research line developed in my lab. This research line puts focus onIBNR models for individual claimsRBNS models for individual claims.These contributions are refined versions of a stream of older papers in which I first explored the use of granular data in claims reserving. See my SSRN page for the references to these contributions.</description>
+    </item>
     
     <item>
       <title>Insurance fraud analytics</title>
@@ -37,24 +64,6 @@
       
       <guid>/projects/2019/02/11/telematics/</guid>
       <description>An overview of published and ongoing research papers within the telematics insurance research line developed in my lab.Unravelling the predictive power of telematics data in car insurance pricing Collaborators: Roel Verbelen, Katrien Antonio and Gerda Claeskens, research in the framework of the Ageas CE Research Chair. Journal paper: JRSS C, 67(5), 1275-1304 Working paper: Working paper on SSRN Abstract. A data set from a Belgian telematics product aimed at young drivers is used to identify how car insurance premiums can be designed based on the telematics data collected by a black box installed in the vehicle.</description>
-    </item>
-    
-    <item>
-      <title>Loss reserving</title>
-      <link>/projects/2019/02/10/reserving/</link>
-      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/2019/02/10/reserving/</guid>
-      <description>An overview of published and ongoing research papers within the loss or claims reserving research line developed in my lab. This research line puts focus onIBNR models for individual claimsRBNS models for individual claims.These contributions are refined versions of a stream of older papers in which I first explored the use of granular data in claims reserving. See my SSRN page for the references to these contributions.</description>
-    </item>
-    
-    <item>
-      <title>Lab members</title>
-      <link>/lab/lab-members/</link>
-      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/lab/lab-members/</guid>
-      <description>At KU Leuven my lab puts focus on research projects covering a range of topics frominsurance analytics. This page gives an overview of: my current PhD students and postdocs, as well as former PhD students and former postdocs. Interested in a PhD or postdoc position in the lab, please drop me a message!PhD students:Jonas Crevecoeur. Jonas holds the degrees of MSc in Mathematics, MSc in Insurance Studies and MSc in Financial and Actuarial Engineering (KU Leuven).</description>
     </item>
     
     <item>
@@ -140,15 +149,6 @@
       
       <guid>/teaching/in-company/</guid>
       <description>Happy learning!</description>
-    </item>
-    
-    <item>
-      <title>Loss Models</title>
-      <link>/projects/2019/02/02/loss-models/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/2019/02/02/loss-models/</guid>
-      <description></description>
     </item>
     
     <item>

@@ -6,10 +6,28 @@
     <description>Recent content in Projects on Katrien Antonio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Loss modelling analytics</title>
+      <link>/projects/2019/09/28/loss-models/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019/09/28/loss-models/</guid>
+      <description>An overview of published research papers within the loss modelling analytics research line developed in my lab. This research line puts focus onmixture models for a global fit of attritional lossesspliced models for a global fit of both attritional and large losses.Modelling censored losses using splicing: a global fit strategy with mixed Erlang and extreme value distributions Collaborators: Tom Reynkens, Roel Verbelen, Jan Beirlant and Katrien Antonio.</description>
+    </item>
+    
+    <item>
+      <title>Loss reserving</title>
+      <link>/projects/2019/09/28/reserving/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/projects/2019/09/28/reserving/</guid>
+      <description>An overview of published and ongoing research papers within the loss or claims reserving research line developed in my lab. This research line puts focus onIBNR models for individual claimsRBNS models for individual claims.These contributions are refined versions of a stream of older papers in which I first explored the use of granular data in claims reserving. See my SSRN page for the references to these contributions.</description>
+    </item>
     
     <item>
       <title>Insurance fraud analytics</title>
@@ -40,30 +58,12 @@
     </item>
     
     <item>
-      <title>Loss reserving</title>
-      <link>/projects/2019/02/10/reserving/</link>
-      <pubDate>Sun, 10 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/2019/02/10/reserving/</guid>
-      <description>An overview of published and ongoing research papers within the loss or claims reserving research line developed in my lab. This research line puts focus onIBNR models for individual claimsRBNS models for individual claims.These contributions are refined versions of a stream of older papers in which I first explored the use of granular data in claims reserving. See my SSRN page for the references to these contributions.</description>
-    </item>
-    
-    <item>
       <title>Mortality modeling</title>
       <link>/projects/2019/02/06/mortality-models/</link>
       <pubDate>Wed, 06 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>/projects/2019/02/06/mortality-models/</guid>
       <description>An overview of published and ongoing research papers within the mortality modeling research line developed in my lab. This research line puts focus on:stochastic models for population mortalityBayesian multi-population mortality modelsportfolio-specific mortality to capture basis riskmicro-level lifetime data to explore the effect of risk factors on mortality ratesthe detection of structural changes.Quantifying longevity gaps using micro-level lifetime data Collaborators: Frank Van Berkum, Katrien Antonio and Michel Vellekoop.</description>
-    </item>
-    
-    <item>
-      <title>Loss Models</title>
-      <link>/projects/2019/02/02/loss-models/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/projects/2019/02/02/loss-models/</guid>
-      <description></description>
     </item>
     
     <item>

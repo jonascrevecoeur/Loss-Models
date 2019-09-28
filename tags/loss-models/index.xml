@@ -6,18 +6,18 @@
     <description>Recent content in Loss Models on Katrien Antonio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 28 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/loss-models/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Loss Models</title>
-      <link>/projects/2019/02/02/loss-models/</link>
-      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      <title>Loss modelling analytics</title>
+      <link>/projects/2019/09/28/loss-models/</link>
+      <pubDate>Sat, 28 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>/projects/2019/02/02/loss-models/</guid>
-      <description></description>
+      <guid>/projects/2019/09/28/loss-models/</guid>
+      <description>An overview of published research papers within the loss modelling analytics research line developed in my lab. This research line puts focus onmixture models for a global fit of attritional lossesspliced models for a global fit of both attritional and large losses.Modelling censored losses using splicing: a global fit strategy with mixed Erlang and extreme value distributions Collaborators: Tom Reynkens, Roel Verbelen, Jan Beirlant and Katrien Antonio.</description>
     </item>
     
   </channel>

@@ -25,7 +25,7 @@ type: post
 <p align="justify">These contributions are refined versions of a stream of older papers in which I first explored the use of granular data in claims reserving. See <a href="https://papers.ssrn.com/sol3/cf_dev/AbsByAuth.cfm?per_id=1766939"target="_blank">my SSRN page</a> for the references to these contributions.</p> 
 
 ***
-
+###### {#RBNS}
 ><p align="justify">**Individual reserving with claim specific covariates**
 </br> </br>
 <u class="dotted">Collaborators:</u> Jonas Crevecoeur and Katrien Antonio, research in the framework of the Argenta Research Chair. 
@@ -55,6 +55,7 @@ reserving methodology. We illustrate our method on a case study of a real life i
 </p>
 
 ***
+###### {#IBNR}
 ><p align="justify">**Modeling the number of hidden events
 subject to observation delay** 
 </br> </br>
