@@ -61,7 +61,7 @@ The course covers the calculation of actuarial present values, premium structure
 <p align="justify">I worked as visiting professor (in a teaching or research role) in the following institutions:</p>
 
 ><p align="justify">
-Aarhus Summer University (Denmark), July 2018, teaching the course <a href="http://international.au.dk/education/admissions/summeruniversity/course/datascienceininsurance19"target="_blank">Data science in insurance</a>
+Aarhus Summer University (Denmark), July 2018 and 2019, teaching the course <a href="http://international.au.dk/education/admissions/summeruniversity/course/datascienceininsurance19"target="_blank">Data science in insurance</a>
 </br></br>
 Collegio Carlo Alberto, University of Torino (Italy), teaching the course *Non-life insurance* in the MSc in Finance, Insurance and Risk Management
 </br> </br>

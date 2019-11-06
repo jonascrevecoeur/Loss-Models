@@ -52,7 +52,7 @@ None at this moment.
 > <p align="justify"><a href="https://www.linkedin.com/in/mariaoskarsdottir/?originalSubdomain=be/"target="_blank">Frank Van Berkum</a>. Frank defended his PhD thesis on *
 Models for population-wide and portfolio-specific mortality* in March 2018 at the University of Amsterdam. Frank's supervisor was prof. dr. ir. Michel Vellekoop (UvA) with Katrien Antonio as co-supervisor. Frank is manager for PwC in The Netherlands.</p>
 
-> <p align="justify"><a href="https://www.linkedin.com/in/roel-verbelen-ab0b14a5/?originalSubdomain=be/"target="_blank">Roel Verbelen</a>. Roel defended his PhD thesis on *Data analytics for insurance loss modeling, telematics pricing and claims reserving* in June 2017. Roel's advisors were prof. Gerda Claeskens and Katrien Antonio. Roel currently works as statistician with Finity Consulting, Sydney, Australia.</p>
+> <p align="justify"><a href="https://www.linkedin.com/in/roel-verbelen-ab0b14a5/?originalSubdomain=be/"target="_blank">Roel Verbelen</a>. Roel defended his PhD thesis on *Data analytics for insurance loss modeling, telematics pricing and claims reserving* in June 2017. Roel's advisors were prof. Gerda Claeskens and Katrien Antonio. Roel currently works as statistician with Finity Consulting, Sydney, Australia. Visit <a href="https://roelverbelen.netlify.com"target="_blank">Roel's personal website</a>.</p>
 
 ***
 

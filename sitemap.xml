@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/projects/2019/11/06/fraud/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/2019/11/06/reserving/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/teaching/mafe/</loc>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/lab/lab-members/</loc>
     <lastmod>2019-09-28T00:00:00+00:00</lastmod>
   </url>
@@ -13,16 +28,6 @@
   </url>
   
   <url>
-    <loc>/projects/2019/09/28/reserving/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/2019/06/13/fraud/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/projects/2019/06/13/machine-learning/</loc>
     <lastmod>2019-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -30,11 +35,6 @@
   <url>
     <loc>/projects/2019/02/11/telematics/</loc>
     <lastmod>2019-02-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/teaching/mafe/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -180,7 +180,7 @@
   
   <url>
     <loc>/tags/fraud-analytics/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -190,19 +190,19 @@
   
   <url>
     <loc>/tags/ibnr/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/insurance/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -238,7 +238,7 @@
   
   <url>
     <loc>/tags/mafe/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -274,13 +274,13 @@
   
   <url>
     <loc>/projects/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/rbns/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -292,13 +292,13 @@
   
   <url>
     <loc>/tags/reserving/</loc>
-    <lastmod>2019-09-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/social-networks/</loc>
-    <lastmod>2019-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,7 +310,7 @@
   
   <url>
     <loc>/teaching/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -322,7 +322,7 @@
   
   <url>
     <loc>/tags/university/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
