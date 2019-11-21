@@ -1,5 +1,5 @@
 ---
-date: "2019-02-06"
+date: "2019-11-21"
 type: "post"
 showonlyimage: false
 draft: false
@@ -30,9 +30,9 @@ keywords: [
 </br> </br>
 <u class="dotted">Collaborators:</u> Frank Van Berkum, Katrien Antonio and Michel Vellekoop. 
 </br> </br>
-<u class="dotted">Journal paper:</u> in progress
+<u class="dotted">Journal paper:</u> R&R
 </br> </br>
-<u class="dotted">Working paper:</u> Chapter 5 in <a href="https://pure.uva.nl/ws/files/22341010/Thesis.pdf"target="_blank">Frank's PhD thesis</a> is a preliminary (2018) version of this paper
+<u class="dotted">Working paper:</u> Chapter 5 in <a href="https://pure.uva.nl/ws/files/22341010/Thesis.pdf"target="_blank">Frank's PhD thesis</a> is a preliminary (2018) version of this paper; new version (July, 2019) is <a href="https://www.dropbox.com/s/iqdzz9qwnpbxwjt/PensionFundMortality_rev.pdf?dl=0"target="_blank">here</a>.
 </br> </br>
 <u class="dotted">Abstract.</u> It is well known that many factors influence the level of individual mortality rates.
 The increasing sophistication of modern statistical methods and the availability of
@@ -43,15 +43,12 @@ that exploits the detailed **micro-level lifetime data** available on individual
 in large datasets, which may include categorical, continuous and spatial risk factors.
 We select the most important covariates with statistical criteria measuring the in- and
 out-of-sample performance of the Poisson regression models for death counts.
-We apply our approach to **a huge dataset from a Dutch pension fund**. Available
-candidates to explain mortality differences in the fund include **the age, the salary, the
-time spent in disability, the level of education of participants and the municipalities
-or neighborhoods where they reside**. For this portfolio, the most relevant risk factors
+We apply our approach to **a huge dataset from a Dutch pension fund**. For this portfolio, the most relevant risk factors
 (next to age and gender) are the salary, the time spent in disability and an allowance
 for working at irregular hours. When analyzing personalized mortality risk profiles
 based on these risk factors, we find substantial differences between the remaining life
 expectancies for the most-favorable and least-favorable risk profiles in the fund (the
-`longevity-gap'): about 12 years at age 25 and 10 years at age 65.
+`longevity-gap'): about 13 years at age 25 and 12 years at age 65.
 </p>
 
 ***

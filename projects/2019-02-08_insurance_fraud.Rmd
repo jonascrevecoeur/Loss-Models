@@ -1,5 +1,5 @@
 ---
-date: '2019-11-06'
+date: '2019-11-21'
 type: "post"
 showonlyimage: false
 draft: false
@@ -29,7 +29,7 @@ keywords: [
 </br> </br>
 <u class="dotted">Journal paper:</u> submitted
 </br> </br>
-<u class="dotted">Working paper:</u> follows soon
+<u class="dotted">Working paper:</u> available <a href="https://www.dropbox.com/s/akijpc0hvkyibv2/SNAfraud.pdf?dl=0"target="_blank">here</a>
 </br> </br>
 <u class="dotted">Presentations:</u> EAJ Leuven 2018, Cass & KU Leuven symposium 2019, Insurance Data Science 2019 (ETH), IME Munchen 2019.
 </br> </br>

@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/projects/2019/11/06/fraud/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <loc>/projects/2019/11/21/fraud/</loc>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/2019/11/21/mortality-models/</loc>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -39,11 +44,6 @@
   
   <url>
     <loc>/lab/lrisk/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/2019/02/06/mortality-models/</loc>
     <lastmod>2019-02-06T00:00:00+00:00</lastmod>
   </url>
   
@@ -180,7 +180,7 @@
   
   <url>
     <loc>/tags/fraud-analytics/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -196,13 +196,13 @@
   
   <url>
     <loc>/tags/insurance/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -250,19 +250,19 @@
   
   <url>
     <loc>/tags/mortality-models/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/population/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/portfolio/</loc>
-    <lastmod>2019-02-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -274,7 +274,7 @@
   
   <url>
     <loc>/projects/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -298,7 +298,7 @@
   
   <url>
     <loc>/tags/social-networks/</loc>
-    <lastmod>2019-11-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-11-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
