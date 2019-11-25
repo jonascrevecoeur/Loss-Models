@@ -373,11 +373,11 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <p>Adding <code>fill = &lt;second factor variable&gt;</code> visualizes the interaction between two factor variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector, <span class="dt">fill =</span> gender))</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="672" /> The default behavior is to stack the bars with different filling colors. Adding <code>position = position_dodge()</code> shows these bars side-by-side.</p>
+<p><img src="_main_files/figure-html/barplot_cps2-1.png" width="672" /> The default behavior is to stack the bars with different filling colors. Adding <code>position = position_dodge()</code> shows these bars side-by-side.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector, <span class="dt">fill =</span> gender),
            <span class="dt">position =</span> <span class="kw">position_dodge</span>())</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/barplot_cps3-1.png" width="672" /></p>
 <p>The following code visualizes the distribution of sector by gender.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector, 
@@ -385,7 +385,7 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
                <span class="dt">y =</span> ..prop..,
                <span class="dt">group =</span> gender),
            <span class="dt">position =</span> <span class="kw">position_dodge</span>())</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/barplot_cps4-1.png" width="672" /></p>
 </div>
 <div id="numeric-variables" class="section level3">
 <h3><span class="header-section-number">5.2.3</span> Numeric variables</h3>
@@ -396,14 +396,14 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(wage), <span class="dt">fill =</span> <span class="st">&quot;#99CCFF&quot;</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/barplot_cps5-1.png" width="672" /></p>
 <p>Adding <code>theme_bw()</code> selects the black and white theme for ggplot figures.</p>
 <p>The density shows that most wages are between 0 and 30, but there is an outlier with a wage of more than 40.</p>
 <p><code>stat_cdf</code> visualizes the empirical cdf.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">stat_ecdf</span>(<span class="kw">aes</span>(wage))</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/cdf_cps-1.png" width="672" /></p>
 <p><code>mean</code> and <code>sd</code> calculate the empirical mean and standard deviation of a numeric variable.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mu &lt;-<span class="st"> </span><span class="kw">mean</span>(CPS<span class="op">$</span>wage)
 sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="op">$</span>wage)
@@ -428,7 +428,7 @@ sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="o
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(CPS<span class="op">$</span>wage, <span class="dt">fill =</span> <span class="st">&#39;original data&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="672" /> The shape of both densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
+<p><img src="_main_files/figure-html/normal_approx_wage-1.png" width="672" /> The shape of both densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
 <p>We can transform the outcomes of <code>CPS$wage</code> by taking the logarithm.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log_wage =<span class="st"> </span><span class="kw">log</span>(CPS<span class="op">$</span>wage)</code></pre></div>
 <p>Exercise:</p>
@@ -443,7 +443,7 @@ normal_approx &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span 
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="kw">log</span>(CPS<span class="op">$</span>wage), <span class="dt">fill =</span> <span class="st">&#39;log_wage&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="672" /> The approximation is better, but the normal distribution has fatter tails than the wage distribution.</p>
+<p><img src="_main_files/figure-html/normal_approx_log_wage-1.png" width="672" /> The approximation is better, but the normal distribution has fatter tails than the wage distribution.</p>
 </div>
 
 </div>
