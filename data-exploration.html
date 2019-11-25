@@ -241,7 +241,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In this tutorial you read in a dataset and perform a first analysis of the variables. You will visualize the data with ggplot and calculate basic statistics such as the expected value and variance of each variable.</p>
 <div id="importing-data-in-r" class="section level2">
 <h2><span class="header-section-number">5.1</span> Importing data in R</h2>
-<p>The data for this tutorial is stored in the file <code>CPS1985.txt</code>, which is stored in a local subdirectory <code>data</code>. Check out chapter 4 of <a href="https://katrienantonio.github.io/intro-R-book/started-with-data.html#importing-data">Data science in insurance: an R intro</a> for a detailed overview of the R methods for importing data.</p>
+<p>The data for this tutorial is stored in the file <a href="data/Assignment2Solution.pdf"><code>CPS1985.txt</code></a>, which is stored in a local subdirectory <code>data</code>. Check out chapter 4 of <a href="https://katrienantonio.github.io/intro-R-book/started-with-data.html#importing-data">Data science in insurance: an R intro</a> for a detailed overview of the R methods for importing data.</p>
 <div id="determining-the-file-path-1" class="section level3">
 <h3><span class="header-section-number">5.1.1</span> Determining the file path</h3>
 <p>Before we can import the data, we have to identify the file location. The file location can be specified by an aboslute path or a relative path.</p>
@@ -257,7 +257,7 @@ relative_path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span>
 
 <span class="co"># This is a relative path from the working directory to the file we want to import</span>
 path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span class="st">CPS1985.txt&quot;</span></code></pre></div>
-<p>It is often convenient to set the working directory to the location of the active R file. In Rstudio you can run the following code to find the directory of the active document.</p>
+<p>It is often convenient to set the working directory to the location of the active R file. In Rstudio the following code retrieves the directory of the active document.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dir &lt;-<span class="st"> </span><span class="kw">dirname</span>(rstudioapi<span class="op">::</span><span class="kw">getActiveDocumentContext</span>()<span class="op">$</span>path)
 <span class="kw">setwd</span>(dir)</code></pre></div>
 </div>
@@ -298,11 +298,11 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 <p>We continue to explore the variables in the <code>CPS</code> dataset with a focus on <code>wage</code> and <code>sector</code>.</p>
 <div id="variable-types" class="section level3">
 <h3><span class="header-section-number">5.2.1</span> variable types</h3>
-<p>The same data can often be stored in different formats in R. Knowing your variable types will avoid unexpected errors. The function <code>class</code> returns the type of an R object.</p>
+<p>The same data can often be stored in different formats. The function <code>class</code> returns the type of an R object.</p>
 <p>Use the function <code>class</code> to</p>
 <ol style="list-style-type: decimal">
-<li>Determine the type of the dataset CPS;</li>
-<li>Determine the type of the variables <code>wage</code> and <code>sector</code>.</li>
+<li>Determine the class of the dataset CPS;</li>
+<li>Determine the class of the variables <code>wage</code> and <code>sector</code> in the dataset CPS.</li>
 </ol>
 <div class="fold s">
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @1. </span>
@@ -365,7 +365,7 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <pre><code>## test
 ##  construction manufacturing         other     insurance 
 ##            24            97           411             1</code></pre>
-<p>In <code>ggplot</code> barplots are visualized using <code>geom_bar</code></p>
+<p>In <code>ggplot</code>, <code>geom_bar</code> is used to construct barplots. Check out the <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">online documentation</a> for example usages.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 <span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector))</code></pre></div>
@@ -373,7 +373,8 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <p>Adding <code>fill = &lt;second factor variable&gt;</code> visualizes the interaction between two factor variables.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector, <span class="dt">fill =</span> gender))</code></pre></div>
-<p><img src="_main_files/figure-html/barplot_cps2-1.png" width="672" /> The default behavior is to stack the bars with different filling colors. Adding <code>position = position_dodge()</code> shows these bars side-by-side.</p>
+<p><img src="_main_files/figure-html/barplot_cps2-1.png" width="672" /></p>
+<p>The default behavior is to stack bars. Adding <code>position = position_dodge()</code> shows bars of different color side-by-side.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector, <span class="dt">fill =</span> gender),
            <span class="dt">position =</span> <span class="kw">position_dodge</span>())</code></pre></div>
@@ -410,7 +411,7 @@ sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="o
 
 <span class="kw">print</span>(<span class="kw">c</span>(mu, sigma))</code></pre></div>
 <pre><code>## [1] 9.031707 5.140885</code></pre>
-<p>We can also calulate the mean and standard deviation using the formulas <span class="math display">\[\mu = E(X) = \frac{1}{n}\sum_{i=1}^n x\]</span> and <span class="math display">\[\sigma = \sqrt{E((X-\mu)^2 } = \sqrt{\frac{1}{n}\sum_{i=1}^n (x-\mu)^2}\]</span></p>
+<p>You can calulate the mean and standard deviation using the formulas <span class="math display">\[\mu = E(X) = \frac{1}{n}\sum_{i=1}^n x\]</span> and <span class="math display">\[\sigma = \sqrt{E((X-\mu)^2 } = \sqrt{\frac{1}{n}\sum_{i=1}^n (x-\mu)^2}\]</span></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n &lt;-<span class="st"> </span><span class="kw">length</span>(CPS<span class="op">$</span>wage)
 
 <span class="co"># mean</span>
@@ -428,7 +429,8 @@ sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="o
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(CPS<span class="op">$</span>wage, <span class="dt">fill =</span> <span class="st">&#39;original data&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/normal_approx_wage-1.png" width="672" /> The shape of both densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
+<p><img src="_main_files/figure-html/normal_approx_wage-1.png" width="672" /></p>
+<p>The shape of both densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
 <p>We can transform the outcomes of <code>CPS$wage</code> by taking the logarithm.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log_wage =<span class="st"> </span><span class="kw">log</span>(CPS<span class="op">$</span>wage)</code></pre></div>
 <p>Exercise:</p>
@@ -443,7 +445,8 @@ normal_approx &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span 
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="kw">log</span>(CPS<span class="op">$</span>wage), <span class="dt">fill =</span> <span class="st">&#39;log_wage&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
-<p><img src="_main_files/figure-html/normal_approx_log_wage-1.png" width="672" /> The approximation is better, but the normal distribution has fatter tails than the wage distribution.</p>
+<p><img src="_main_files/figure-html/normal_approx_log_wage-1.png" width="672" /></p>
+<p>The approximation is better, but the normal distribution has fatter tails than the wage distribution.</p>
 </div>
 
 </div>
