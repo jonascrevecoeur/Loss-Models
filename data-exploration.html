@@ -25,7 +25,7 @@
 <meta name="author" content="Katrien Antonio and Jonas Crevecoeur">
 
 
-<meta name="date" content="2019-11-25">
+<meta name="date" content="2019-11-26">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -266,7 +266,7 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 <p><code>read.table()</code> is the most basic import function in R. You can specify tons of different arguments in this function (See <code>?read.table</code>).</p>
 <p>We import the dataset <code>CPS1985.txt</code> in a variable <code>CPS</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">CPS &lt;-<span class="st"> </span><span class="kw">read.table</span>(path)</code></pre></div>
-<p>After importing a dataset, you should always inspect the data to confirm that the data was imported correctly. <code>head</code> print the first records of the dataset.</p>
+<p>After importing a dataset, you should always inspect the data to confirm that the data was imported correctly. <code>head</code> prints the first records of the dataset.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(CPS)</code></pre></div>
 <pre><code>##    wage education experience age ethnicity region gender occupation
 ## 1  5.10         8         21  35  hispanic  other female     worker
@@ -313,7 +313,7 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(CPS<span class="op">$</span>sector)</code></pre></div>
 <pre><code>## [1] &quot;factor&quot;</code></pre>
-<p>Within the <code>tidyverse</code> the class of all variable in a dataset can be determined using <code>map_chr(&lt;dataset&gt;, class)</code>.</p>
+<p>Within the <code>tidyverse</code> the class of all variables in a dataset can be determined using <code>map_chr(&lt;dataset&gt;, class)</code>.</p>
 <p>The function <code>map(&lt;dataset&gt;, &lt;function&gt;)</code> applies <code>&lt;function&gt;</code> to each of the columns of <code>&lt;dataset&gt;</code>. We can use <code>map_chr</code> when the output of <code>&lt;function&gt;</code> is of type <code>character</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(tidyverse)
 <span class="kw">map_chr</span>(CPS, class)</code></pre></div>
@@ -338,8 +338,7 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 ##  construction manufacturing         other 
 ##            24            98           411</code></pre>
 <p>Factors are type-safe, that is you will get a warning when you try to insert a value that is not in <code>levels(&lt;factor variable&gt;)</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># We copy sector first, because we don&#39;t want to introduce NA in our dataset</span>
-test &lt;-<span class="st"> </span>CPS<span class="op">$</span>sector
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">test &lt;-<span class="st"> </span>CPS<span class="op">$</span>sector
 test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span></code></pre></div>
 <pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, 1, value = &quot;insurance&quot;): invalid factor
 ## level, NA generated</code></pre>
@@ -365,7 +364,46 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <pre><code>## test
 ##  construction manufacturing         other     insurance 
 ##            24            97           411             1</code></pre>
-<p>In <code>ggplot</code>, <code>geom_bar</code> is used to construct barplots. Check out the <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">online documentation</a> for example usages.</p>
+<p>The following code applies <code>table</code> to all columns of the dataset <code>CPS</code> that are of class factor.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(tidyverse)
+CPS <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">keep</span>(is.factor) <span class="op">%&gt;%</span><span class="st"> </span><span class="co"># Select all columns of class factor</span>
+<span class="st">  </span><span class="kw">map</span>(table) <span class="co"># apply the table function to these columns</span></code></pre></div>
+<pre><code>## $ethnicity
+## 
+##     cauc hispanic    other 
+##      439       27       67 
+## 
+## $region
+## 
+## other south 
+##   377   156 
+## 
+## $gender
+## 
+## female   male 
+##    244    289 
+## 
+## $occupation
+## 
+## management     office      sales   services  technical     worker 
+##         55         97         38         83        105        155 
+## 
+## $sector
+## 
+##  construction manufacturing         other 
+##            24            98           411 
+## 
+## $union
+## 
+##  no yes 
+## 437  96 
+## 
+## $married
+## 
+##  no yes 
+## 184 349</code></pre>
+<p>In <code>ggplot</code>, <code>geom_bar</code> is used to construct barplots. Check out the <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">online documentation</a> for examples.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(ggplot2)
 <span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_bar</span>(<span class="kw">aes</span>(sector))</code></pre></div>
@@ -393,7 +431,7 @@ test[<span class="dv">1</span>] &lt;-<span class="st"> &#39;insurance&#39;</span
 <p>The variable <code>wage</code> in the dataset <code>CPS</code> is numeric.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(CPS<span class="op">$</span>wage)</code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
-<p>A good strategy is to start by visualizing numeric variables in density plot.</p>
+<p>A good strategy is to start by visualizing numeric variables in a density plot.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(CPS) <span class="op">+</span>
 <span class="st">  </span><span class="kw">theme_bw</span>() <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(wage), <span class="dt">fill =</span> <span class="st">&quot;#99CCFF&quot;</span>)</code></pre></div>
@@ -411,7 +449,7 @@ sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="o
 
 <span class="kw">print</span>(<span class="kw">c</span>(mu, sigma))</code></pre></div>
 <pre><code>## [1] 9.031707 5.140885</code></pre>
-<p>You can calulate the mean and standard deviation using the formulas <span class="math display">\[\mu = E(X) = \frac{1}{n}\sum_{i=1}^n x\]</span> and <span class="math display">\[\sigma = \sqrt{E((X-\mu)^2 } = \sqrt{\frac{1}{n}\sum_{i=1}^n (x-\mu)^2}\]</span></p>
+<p>You can also calulate the mean and standard deviation using the formulas <span class="math display">\[\mu = E(X) = \frac{1}{n}\sum_{i=1}^n x\]</span> and <span class="math display">\[\sigma = \sqrt{E((X-\mu)^2 } = \sqrt{\frac{1}{n}\sum_{i=1}^n (x-\mu)^2}\]</span></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">n &lt;-<span class="st"> </span><span class="kw">length</span>(CPS<span class="op">$</span>wage)
 
 <span class="co"># mean</span>
@@ -430,8 +468,8 @@ sigma &lt;-<span class="st"> </span><span class="kw">sd</span>(CPS<span class="o
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(CPS<span class="op">$</span>wage, <span class="dt">fill =</span> <span class="st">&#39;original data&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
 <p><img src="_main_files/figure-html/normal_approx_wage-1.png" width="672" /></p>
-<p>The shape of both densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
-<p>We can transform the outcomes of <code>CPS$wage</code> by taking the logarithm.</p>
+<p>The shape of these densities is quite different and we conclude that the normal distribution is not a good approximation for <code>CPS$wage</code>. One of the reasons for this poor approximation is that the normal distribution is defined on <span class="math inline">\([-\infty, \infty]\)</span>, whereas wage has to be positive.</p>
+<p>We transform the outcomes of <code>CPS$wage</code> by taking the logarithm.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">log_wage =<span class="st"> </span><span class="kw">log</span>(CPS<span class="op">$</span>wage)</code></pre></div>
 <p>Exercise:</p>
 <p>Check whether the normal distribution is a good approximation for <code>log(CPS$wage)</code>.</p>
@@ -446,7 +484,7 @@ normal_approx &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span 
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(<span class="kw">log</span>(CPS<span class="op">$</span>wage), <span class="dt">fill =</span> <span class="st">&#39;log_wage&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>) <span class="op">+</span>
 <span class="st">  </span><span class="kw">geom_density</span>(<span class="kw">aes</span>(normal_approx, <span class="dt">fill =</span> <span class="st">&#39;normal approximation&#39;</span>), <span class="dt">alpha =</span> .<span class="dv">5</span>)</code></pre></div>
 <p><img src="_main_files/figure-html/normal_approx_log_wage-1.png" width="672" /></p>
-<p>The approximation is better, but the normal distribution has fatter tails than the wage distribution.</p>
+<p>The approximation is better, but the normal distribution has fatter tails than the log(wage) distribution.</p>
 </div>
 
 </div>
