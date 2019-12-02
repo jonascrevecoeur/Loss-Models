@@ -5,11 +5,11 @@
 
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>5 Data exploration | Loss Models : a collection of computer labs in R</title>
+  <title>2 Data exploration | Loss Models : a collection of computer labs in R</title>
   <meta name="description" content="Tutorials for the course of Loss Models">
   <meta name="generator" content="bookdown  and GitBook 2.6.7">
 
-  <meta property="og:title" content="5 Data exploration | Loss Models : a collection of computer labs in R" />
+  <meta property="og:title" content="2 Data exploration | Loss Models : a collection of computer labs in R" />
   <meta property="og:type" content="book" />
   
   
@@ -17,7 +17,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="5 Data exploration | Loss Models : a collection of computer labs in R" />
+  <meta name="twitter:title" content="2 Data exploration | Loss Models : a collection of computer labs in R" />
   
   <meta name="twitter:description" content="Tutorials for the course of Loss Models" />
   
@@ -25,15 +25,15 @@
 <meta name="author" content="Katrien Antonio and Jonas Crevecoeur">
 
 
-<meta name="date" content="2019-11-26">
+<meta name="date" content="2019-12-02">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="simulation.html">
-<link rel="next" href="assignment.html">
+<link rel="prev" href="index.html">
+<link rel="next" href="simple-parametric-distributions-for-frequency-and-severity-data.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -140,83 +140,83 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <ul class="summary">
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Intro</a></li>
-<li class="chapter" data-level="2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html"><i class="fa fa-check"></i><b>2</b> Simple, parametric distributions for frequency and severity data</a><ul>
-<li class="chapter" data-level="2.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#the-exponential-distribution"><i class="fa fa-check"></i><b>2.1</b> The exponential distribution</a><ul>
-<li class="chapter" data-level="2.1.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-data"><i class="fa fa-check"></i><b>2.1.1</b> Simulating data</a></li>
-<li class="chapter" data-level="2.1.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis"><i class="fa fa-check"></i><b>2.1.2</b> Exploratory analysis</a></li>
-<li class="chapter" data-level="2.1.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#data-visualization-with-ggplot"><i class="fa fa-check"></i><b>2.1.3</b> Data visualization with ggplot</a></li>
-<li class="chapter" data-level="2.1.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle"><i class="fa fa-check"></i><b>2.1.4</b> Maximum Likelihood Estimation (MLE)</a></li>
+<li class="chapter" data-level="2" data-path="data-exploration.html"><a href="data-exploration.html"><i class="fa fa-check"></i><b>2</b> Data exploration</a><ul>
+<li class="chapter" data-level="2.1" data-path="data-exploration.html"><a href="data-exploration.html#importing-data-in-r"><i class="fa fa-check"></i><b>2.1</b> Importing data in R</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="data-exploration.html"><a href="data-exploration.html#determining-the-file-path"><i class="fa fa-check"></i><b>2.1.1</b> Determining the file path</a></li>
+<li class="chapter" data-level="2.1.2" data-path="data-exploration.html"><a href="data-exploration.html#import-a-.txt-file"><i class="fa fa-check"></i><b>2.1.2</b> Import a .txt file</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#discrete-distributions"><i class="fa fa-check"></i><b>2.2</b> Discrete distributions</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-the-data"><i class="fa fa-check"></i><b>2.2.1</b> Simulating the data</a></li>
-<li class="chapter" data-level="2.2.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis-1"><i class="fa fa-check"></i><b>2.2.2</b> Exploratory analysis</a></li>
-<li class="chapter" data-level="2.2.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle-1"><i class="fa fa-check"></i><b>2.2.3</b> Maximum Likelihood Estimation (MLE)</a></li>
-<li class="chapter" data-level="2.2.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#comparing-fitted-models"><i class="fa fa-check"></i><b>2.2.4</b> Comparing fitted models</a></li>
+<li class="chapter" data-level="2.2" data-path="data-exploration.html"><a href="data-exploration.html#data-exploration-1"><i class="fa fa-check"></i><b>2.2</b> Data exploration</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="data-exploration.html"><a href="data-exploration.html#variable-types"><i class="fa fa-check"></i><b>2.2.1</b> variable types</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data-exploration.html"><a href="data-exploration.html#factor-variables"><i class="fa fa-check"></i><b>2.2.2</b> Factor variables</a></li>
+<li class="chapter" data-level="2.2.3" data-path="data-exploration.html"><a href="data-exploration.html#numeric-variables"><i class="fa fa-check"></i><b>2.2.3</b> Numeric variables</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html"><i class="fa fa-check"></i><b>3</b> Putting it all together: case study on modelling claim counts</a><ul>
-<li class="chapter" data-level="3.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#read-in-data"><i class="fa fa-check"></i><b>3.1</b> Read in data</a><ul>
-<li class="chapter" data-level="3.1.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#determining-the-file-path"><i class="fa fa-check"></i><b>3.1.1</b> Determining the file path</a></li>
-<li class="chapter" data-level="3.1.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#importing-a-.txt-file"><i class="fa fa-check"></i><b>3.1.2</b> Importing a .txt file</a></li>
+<li class="chapter" data-level="3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html"><i class="fa fa-check"></i><b>3</b> Simple, parametric distributions for frequency and severity data</a><ul>
+<li class="chapter" data-level="3.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#the-exponential-distribution"><i class="fa fa-check"></i><b>3.1</b> The exponential distribution</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-data"><i class="fa fa-check"></i><b>3.1.1</b> Simulating data</a></li>
+<li class="chapter" data-level="3.1.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis"><i class="fa fa-check"></i><b>3.1.2</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="3.1.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#data-visualization-with-ggplot"><i class="fa fa-check"></i><b>3.1.3</b> Data visualization with ggplot</a></li>
+<li class="chapter" data-level="3.1.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle"><i class="fa fa-check"></i><b>3.1.4</b> Maximum Likelihood Estimation (MLE)</a></li>
 </ul></li>
-<li class="chapter" data-level="3.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#exploratory-analysis-2"><i class="fa fa-check"></i><b>3.2</b> Exploratory analysis</a><ul>
-<li class="chapter" data-level="3.2.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#summary-statistics-disregarding-exposure"><i class="fa fa-check"></i><b>3.2.1</b> Summary statistics disregarding exposure</a></li>
-<li class="chapter" data-level="3.2.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#summary-statistics-taking-into-account-exposure"><i class="fa fa-check"></i><b>3.2.2</b> Summary statistics taking into account exposure</a></li>
-<li class="chapter" data-level="3.2.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#empirical-probability-distribution"><i class="fa fa-check"></i><b>3.2.3</b> Empirical probability distribution</a></li>
-<li class="chapter" data-level="3.2.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#the-a-b-0-class-of-distributions"><i class="fa fa-check"></i><b>3.2.4</b> The (a, b, 0) class of distributions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#fitting-count-distributions"><i class="fa fa-check"></i><b>3.3</b> Fitting count distributions</a><ul>
-<li class="chapter" data-level="3.3.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson"><i class="fa fa-check"></i><b>3.3.1</b> Poisson</a></li>
-<li class="chapter" data-level="3.3.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#negative-binomial-1"><i class="fa fa-check"></i><b>3.3.2</b> Negative binomial</a></li>
-<li class="chapter" data-level="3.3.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#modified-poisson-distributions"><i class="fa fa-check"></i><b>3.3.3</b> Modified Poisson distributions</a></li>
-</ul></li>
-<li class="chapter" data-level="3.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#aic-1"><i class="fa fa-check"></i><b>3.4</b> AIC</a></li>
-<li class="chapter" data-level="3.5" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#replicating-data-sets"><i class="fa fa-check"></i><b>3.5</b> Replicating data sets</a><ul>
-<li class="chapter" data-level="3.5.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson-1"><i class="fa fa-check"></i><b>3.5.1</b> Poisson</a></li>
-<li class="chapter" data-level="3.5.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#nb"><i class="fa fa-check"></i><b>3.5.2</b> NB</a></li>
-<li class="chapter" data-level="3.5.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#zip"><i class="fa fa-check"></i><b>3.5.3</b> ZIP</a></li>
-<li class="chapter" data-level="3.5.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#hurdle-poisson-1"><i class="fa fa-check"></i><b>3.5.4</b> Hurdle Poisson</a></li>
-</ul></li>
-<li class="chapter" data-level="3.6" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#mean-and-variance-of-the-estimated-zip-nb-hurdle-poisson"><i class="fa fa-check"></i><b>3.6</b> Mean and variance of the estimated ZIP, NB, Hurdle Poisson</a><ul>
-<li class="chapter" data-level="3.6.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson-2"><i class="fa fa-check"></i><b>3.6.1</b> Poisson</a></li>
-<li class="chapter" data-level="3.6.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#nb-1"><i class="fa fa-check"></i><b>3.6.2</b> NB</a></li>
-<li class="chapter" data-level="3.6.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#zip-1"><i class="fa fa-check"></i><b>3.6.3</b> ZIP</a></li>
-<li class="chapter" data-level="3.6.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#hurdle-poisson-2"><i class="fa fa-check"></i><b>3.6.4</b> Hurdle Poisson</a></li>
-<li class="chapter" data-level="3.6.5" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#comparison-with-empirical-mean-and-variance"><i class="fa fa-check"></i><b>3.6.5</b> Comparison with empirical mean and variance</a></li>
-</ul></li>
-<li class="chapter" data-level="3.7" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#conclusion"><i class="fa fa-check"></i><b>3.7</b> Conclusion</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>4</b> Simulation</a><ul>
-<li class="chapter" data-level="4.1" data-path="simulation.html"><a href="simulation.html#severity"><i class="fa fa-check"></i><b>4.1</b> Severity</a><ul>
-<li class="chapter" data-level="4.1.1" data-path="simulation.html"><a href="simulation.html#probability-integral-transform"><i class="fa fa-check"></i><b>4.1.1</b> Probability integral transform</a></li>
-<li class="chapter" data-level="4.1.2" data-path="simulation.html"><a href="simulation.html#visualization"><i class="fa fa-check"></i><b>4.1.2</b> Visualization</a></li>
-<li class="chapter" data-level="4.1.3" data-path="simulation.html"><a href="simulation.html#expected-loss-with-a-deductible"><i class="fa fa-check"></i><b>4.1.3</b> Expected loss with a deductible</a></li>
-</ul></li>
-<li class="chapter" data-level="4.2" data-path="simulation.html"><a href="simulation.html#aggregate-loss"><i class="fa fa-check"></i><b>4.2</b> Aggregate loss</a></li>
-<li class="chapter" data-level="4.3" data-path="simulation.html"><a href="simulation.html#simulating-future-life-times-of-newborns"><i class="fa fa-check"></i><b>4.3</b> Simulating future life times of newborns</a><ul>
-<li class="chapter" data-level="4.3.1" data-path="simulation.html"><a href="simulation.html#importing-the-data"><i class="fa fa-check"></i><b>4.3.1</b> Importing the data</a></li>
-<li class="chapter" data-level="4.3.2" data-path="simulation.html"><a href="simulation.html#simulate-the-whole-life-time"><i class="fa fa-check"></i><b>4.3.2</b> Simulate the whole life time</a></li>
-<li class="chapter" data-level="4.3.3" data-path="simulation.html"><a href="simulation.html#simulate-the-future-lifetime"><i class="fa fa-check"></i><b>4.3.3</b> Simulate the future lifetime</a></li>
-<li class="chapter" data-level="4.3.4" data-path="simulation.html"><a href="simulation.html#visualize-the-data"><i class="fa fa-check"></i><b>4.3.4</b> Visualize the data</a></li>
+<li class="chapter" data-level="3.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#discrete-distributions"><i class="fa fa-check"></i><b>3.2</b> Discrete distributions</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#simulating-the-data"><i class="fa fa-check"></i><b>3.2.1</b> Simulating the data</a></li>
+<li class="chapter" data-level="3.2.2" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#exploratory-analysis-1"><i class="fa fa-check"></i><b>3.2.2</b> Exploratory analysis</a></li>
+<li class="chapter" data-level="3.2.3" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#maximum-likelihood-estimation-mle-1"><i class="fa fa-check"></i><b>3.2.3</b> Maximum Likelihood Estimation (MLE)</a></li>
+<li class="chapter" data-level="3.2.4" data-path="simple-parametric-distributions-for-frequency-and-severity-data.html"><a href="simple-parametric-distributions-for-frequency-and-severity-data.html#comparing-fitted-models"><i class="fa fa-check"></i><b>3.2.4</b> Comparing fitted models</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="data-exploration.html"><a href="data-exploration.html"><i class="fa fa-check"></i><b>5</b> Data exploration</a><ul>
-<li class="chapter" data-level="5.1" data-path="data-exploration.html"><a href="data-exploration.html#importing-data-in-r"><i class="fa fa-check"></i><b>5.1</b> Importing data in R</a><ul>
-<li class="chapter" data-level="5.1.1" data-path="data-exploration.html"><a href="data-exploration.html#determining-the-file-path-1"><i class="fa fa-check"></i><b>5.1.1</b> Determining the file path</a></li>
-<li class="chapter" data-level="5.1.2" data-path="data-exploration.html"><a href="data-exploration.html#import-a-.txt-file"><i class="fa fa-check"></i><b>5.1.2</b> Import a .txt file</a></li>
+<li class="chapter" data-level="4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html"><i class="fa fa-check"></i><b>4</b> Putting it all together: case study on modelling claim counts</a><ul>
+<li class="chapter" data-level="4.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#read-in-data"><i class="fa fa-check"></i><b>4.1</b> Read in data</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#determining-the-file-path-1"><i class="fa fa-check"></i><b>4.1.1</b> Determining the file path</a></li>
+<li class="chapter" data-level="4.1.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#importing-a-.txt-file"><i class="fa fa-check"></i><b>4.1.2</b> Importing a .txt file</a></li>
 </ul></li>
-<li class="chapter" data-level="5.2" data-path="data-exploration.html"><a href="data-exploration.html#data-exploration-1"><i class="fa fa-check"></i><b>5.2</b> Data exploration</a><ul>
-<li class="chapter" data-level="5.2.1" data-path="data-exploration.html"><a href="data-exploration.html#variable-types"><i class="fa fa-check"></i><b>5.2.1</b> variable types</a></li>
-<li class="chapter" data-level="5.2.2" data-path="data-exploration.html"><a href="data-exploration.html#factor-variables"><i class="fa fa-check"></i><b>5.2.2</b> Factor variables</a></li>
-<li class="chapter" data-level="5.2.3" data-path="data-exploration.html"><a href="data-exploration.html#numeric-variables"><i class="fa fa-check"></i><b>5.2.3</b> Numeric variables</a></li>
+<li class="chapter" data-level="4.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#exploratory-analysis-2"><i class="fa fa-check"></i><b>4.2</b> Exploratory analysis</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#summary-statistics-disregarding-exposure"><i class="fa fa-check"></i><b>4.2.1</b> Summary statistics disregarding exposure</a></li>
+<li class="chapter" data-level="4.2.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#summary-statistics-taking-into-account-exposure"><i class="fa fa-check"></i><b>4.2.2</b> Summary statistics taking into account exposure</a></li>
+<li class="chapter" data-level="4.2.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#empirical-probability-distribution"><i class="fa fa-check"></i><b>4.2.3</b> Empirical probability distribution</a></li>
+<li class="chapter" data-level="4.2.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#the-a-b-0-class-of-distributions"><i class="fa fa-check"></i><b>4.2.4</b> The (a, b, 0) class of distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#fitting-count-distributions"><i class="fa fa-check"></i><b>4.3</b> Fitting count distributions</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson"><i class="fa fa-check"></i><b>4.3.1</b> Poisson</a></li>
+<li class="chapter" data-level="4.3.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#negative-binomial-1"><i class="fa fa-check"></i><b>4.3.2</b> Negative binomial</a></li>
+<li class="chapter" data-level="4.3.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#modified-poisson-distributions"><i class="fa fa-check"></i><b>4.3.3</b> Modified Poisson distributions</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#aic-1"><i class="fa fa-check"></i><b>4.4</b> AIC</a></li>
+<li class="chapter" data-level="4.5" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#replicating-data-sets"><i class="fa fa-check"></i><b>4.5</b> Replicating data sets</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson-1"><i class="fa fa-check"></i><b>4.5.1</b> Poisson</a></li>
+<li class="chapter" data-level="4.5.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#nb"><i class="fa fa-check"></i><b>4.5.2</b> NB</a></li>
+<li class="chapter" data-level="4.5.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#zip"><i class="fa fa-check"></i><b>4.5.3</b> ZIP</a></li>
+<li class="chapter" data-level="4.5.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#hurdle-poisson-1"><i class="fa fa-check"></i><b>4.5.4</b> Hurdle Poisson</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#mean-and-variance-of-the-estimated-zip-nb-hurdle-poisson"><i class="fa fa-check"></i><b>4.6</b> Mean and variance of the estimated ZIP, NB, Hurdle Poisson</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#poisson-2"><i class="fa fa-check"></i><b>4.6.1</b> Poisson</a></li>
+<li class="chapter" data-level="4.6.2" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#nb-1"><i class="fa fa-check"></i><b>4.6.2</b> NB</a></li>
+<li class="chapter" data-level="4.6.3" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#zip-1"><i class="fa fa-check"></i><b>4.6.3</b> ZIP</a></li>
+<li class="chapter" data-level="4.6.4" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#hurdle-poisson-2"><i class="fa fa-check"></i><b>4.6.4</b> Hurdle Poisson</a></li>
+<li class="chapter" data-level="4.6.5" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#comparison-with-empirical-mean-and-variance"><i class="fa fa-check"></i><b>4.6.5</b> Comparison with empirical mean and variance</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="putting-it-all-together-case-study-on-modelling-claim-counts.html"><a href="putting-it-all-together-case-study-on-modelling-claim-counts.html#conclusion"><i class="fa fa-check"></i><b>4.7</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="simulation.html"><a href="simulation.html"><i class="fa fa-check"></i><b>5</b> Simulation</a><ul>
+<li class="chapter" data-level="5.1" data-path="simulation.html"><a href="simulation.html#severity"><i class="fa fa-check"></i><b>5.1</b> Severity</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="simulation.html"><a href="simulation.html#probability-integral-transform"><i class="fa fa-check"></i><b>5.1.1</b> Probability integral transform</a></li>
+<li class="chapter" data-level="5.1.2" data-path="simulation.html"><a href="simulation.html#visualization"><i class="fa fa-check"></i><b>5.1.2</b> Visualization</a></li>
+<li class="chapter" data-level="5.1.3" data-path="simulation.html"><a href="simulation.html#expected-loss-with-a-deductible"><i class="fa fa-check"></i><b>5.1.3</b> Expected loss with a deductible</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="simulation.html"><a href="simulation.html#aggregate-loss"><i class="fa fa-check"></i><b>5.2</b> Aggregate loss</a></li>
+<li class="chapter" data-level="5.3" data-path="simulation.html"><a href="simulation.html#simulating-future-life-times-of-newborns"><i class="fa fa-check"></i><b>5.3</b> Simulating future life times of newborns</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="simulation.html"><a href="simulation.html#importing-the-data"><i class="fa fa-check"></i><b>5.3.1</b> Importing the data</a></li>
+<li class="chapter" data-level="5.3.2" data-path="simulation.html"><a href="simulation.html#simulate-the-whole-life-time"><i class="fa fa-check"></i><b>5.3.2</b> Simulate the whole life time</a></li>
+<li class="chapter" data-level="5.3.3" data-path="simulation.html"><a href="simulation.html#simulate-the-future-lifetime"><i class="fa fa-check"></i><b>5.3.3</b> Simulate the future lifetime</a></li>
+<li class="chapter" data-level="5.3.4" data-path="simulation.html"><a href="simulation.html#visualize-the-data"><i class="fa fa-check"></i><b>5.3.4</b> Visualize the data</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="assignment.html"><a href="assignment.html"><i class="fa fa-check"></i><b>6</b> Assignment</a><ul>
-<li class="chapter" data-level="6.1" data-path="assignment.html"><a href="assignment.html#assignment-1"><i class="fa fa-check"></i><b>6.1</b> Assignment 1</a><ul>
-<li class="chapter" data-level="6.1.1" data-path="assignment.html"><a href="assignment.html#exercise-1"><i class="fa fa-check"></i><b>6.1.1</b> Exercise 1</a></li>
+<li class="chapter" data-level="6" data-path="r-implementation-of-the-assignments-2019-2020.html"><a href="r-implementation-of-the-assignments-2019-2020.html"><i class="fa fa-check"></i><b>6</b> R implementation of the assignments 2019-2020</a><ul>
+<li class="chapter" data-level="6.1" data-path="r-implementation-of-the-assignments-2019-2020.html"><a href="r-implementation-of-the-assignments-2019-2020.html#assignment-1"><i class="fa fa-check"></i><b>6.1</b> Assignment 1</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="r-implementation-of-the-assignments-2019-2020.html"><a href="r-implementation-of-the-assignments-2019-2020.html#exercise-1"><i class="fa fa-check"></i><b>6.1.1</b> Exercise 1</a></li>
 </ul></li>
-<li class="chapter" data-level="6.2" data-path="assignment.html"><a href="assignment.html#assignment-2"><i class="fa fa-check"></i><b>6.2</b> Assignment 2</a><ul>
-<li class="chapter" data-level="6.2.1" data-path="assignment.html"><a href="assignment.html#exercise-2"><i class="fa fa-check"></i><b>6.2.1</b> Exercise 2</a></li>
+<li class="chapter" data-level="6.2" data-path="r-implementation-of-the-assignments-2019-2020.html"><a href="r-implementation-of-the-assignments-2019-2020.html#assignment-2"><i class="fa fa-check"></i><b>6.2</b> Assignment 2</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="r-implementation-of-the-assignments-2019-2020.html"><a href="r-implementation-of-the-assignments-2019-2020.html#exercise-2"><i class="fa fa-check"></i><b>6.2.1</b> Exercise 2</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -237,13 +237,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
             <section class="normal" id="section-">
 <div id="data-exploration" class="section level1">
-<h1><span class="header-section-number">5</span> Data exploration</h1>
+<h1><span class="header-section-number">2</span> Data exploration</h1>
 <p>In this tutorial you read in a dataset and perform a first analysis of the variables. You will visualize the data with ggplot and calculate basic statistics such as the expected value and variance of each variable.</p>
 <div id="importing-data-in-r" class="section level2">
-<h2><span class="header-section-number">5.1</span> Importing data in R</h2>
+<h2><span class="header-section-number">2.1</span> Importing data in R</h2>
 <p>The data for this tutorial is stored in the file <a href="data/CPS1985.txt">CPS1985.txt</a>, which is stored in a local subdirectory <code>data</code>. Check out chapter 4 of <a href="https://katrienantonio.github.io/intro-R-book/started-with-data.html#importing-data">Data science in insurance: an R intro</a> for a detailed overview of the R methods for importing data.</p>
-<div id="determining-the-file-path-1" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Determining the file path</h3>
+<div id="determining-the-file-path" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Determining the file path</h3>
 <p>Before we can import the data, we have to identify the file location. The file location can be specified by an aboslute path or a relative path.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">absolute_path &lt;-<span class="st"> &quot;C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">u0110176</span><span class="ch">\\</span><span class="st">Dropbox</span><span class="ch">\\</span><span class="st">Verzekeringen niet-leven</span><span class="ch">\\</span><span class="st">Bookdown</span><span class="ch">\\</span><span class="st">data</span><span class="ch">\\</span><span class="st">CPS1985.txt&quot;</span>
 relative_path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span class="st">CPS1985.txt&quot;</span></code></pre></div>
@@ -262,7 +262,7 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 <span class="kw">setwd</span>(dir)</code></pre></div>
 </div>
 <div id="import-a-.txt-file" class="section level3">
-<h3><span class="header-section-number">5.1.2</span> Import a .txt file</h3>
+<h3><span class="header-section-number">2.1.2</span> Import a .txt file</h3>
 <p><code>read.table()</code> is the most basic import function in R. You can specify tons of different arguments in this function (See <code>?read.table</code>).</p>
 <p>We import the dataset <code>CPS1985.txt</code> in a variable <code>CPS</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">CPS &lt;-<span class="st"> </span><span class="kw">read.table</span>(path)</code></pre></div>
@@ -294,10 +294,10 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 </div>
 </div>
 <div id="data-exploration-1" class="section level2">
-<h2><span class="header-section-number">5.2</span> Data exploration</h2>
+<h2><span class="header-section-number">2.2</span> Data exploration</h2>
 <p>We continue to explore the variables in the <code>CPS</code> dataset with a focus on <code>wage</code> and <code>sector</code>.</p>
 <div id="variable-types" class="section level3">
-<h3><span class="header-section-number">5.2.1</span> variable types</h3>
+<h3><span class="header-section-number">2.2.1</span> variable types</h3>
 <p>The same data can often be stored in different formats. The function <code>class</code> returns the type of an R object.</p>
 <p>Use the function <code>class</code> to</p>
 <ol style="list-style-type: decimal">
@@ -324,7 +324,7 @@ path &lt;-<span class="st"> &quot;data</span><span class="ch">\\</span><span cla
 </div>
 </div>
 <div id="factor-variables" class="section level3">
-<h3><span class="header-section-number">5.2.2</span> Factor variables</h3>
+<h3><span class="header-section-number">2.2.2</span> Factor variables</h3>
 <p><code>factor</code> is the R-datatype for unordened categorical variables.</p>
 <p>Some usefull functions for <code>factor</code>variables are:</p>
 <ul>
@@ -427,7 +427,7 @@ CPS <span class="op">%&gt;%</span><span class="st"> </span>
 <p><img src="_main_files/figure-html/barplot_cps4-1.png" width="672" /></p>
 </div>
 <div id="numeric-variables" class="section level3">
-<h3><span class="header-section-number">5.2.3</span> Numeric variables</h3>
+<h3><span class="header-section-number">2.2.3</span> Numeric variables</h3>
 <p>The variable <code>wage</code> in the dataset <code>CPS</code> is numeric.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(CPS<span class="op">$</span>wage)</code></pre></div>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
@@ -495,8 +495,8 @@ normal_approx &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span 
           </div>
         </div>
       </div>
-<a href="simulation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="assignment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="simple-parametric-distributions-for-frequency-and-severity-data.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
