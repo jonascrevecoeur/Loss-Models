@@ -25,7 +25,7 @@
 <meta name="author" content="Katrien Antonio and Jonas Crevecoeur">
 
 
-<meta name="date" content="2019-12-02">
+<meta name="date" content="2019-12-05">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -254,6 +254,30 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <blockquote>
 <p>Given a CDF <span class="math inline">\(F_X\)</span> of a continuous distribution and a uniformly distributed random variable <span class="math inline">\(U\)</span> on <span class="math inline">\([0, 1]\)</span>. Then <span class="math inline">\(F_X\)</span> is the CDF of the random variable <span class="math inline">\(X = F_X^{-1}(U)\)</span>.</p>
 </blockquote>
+<p>We illustrate this with the exponential distribution, <span class="math display">\[ 
+F_Y(y) = \begin{cases} 
+1 - \exp(-\lambda \cdot y) &amp; y \geq 0 \\
+0 &amp; y &lt; 0
+\end{cases}
+\]</span> and <span class="math display">\[ 
+F_Y^{-1}(z) = -\frac{\log(1-z)}{\lambda}, \quad z \in (0, 1).
+\]</span></p>
+<p>We simulate <span class="math inline">\(u\)</span> from a uniform distribution on <span class="math inline">\([0, 1]\)</span>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">set.seed</span>(<span class="dv">4</span>)
+u &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">1</span>)</code></pre></div>
+<p>When we now apply the inverse cdf on this simulation <span class="math inline">\(u\)</span>, we obtain a simulation from the exponential distribution.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Finverse &lt;-<span class="st"> </span><span class="cf">function</span>(z, lambda) {
+  <span class="op">-</span><span class="kw">log</span>(<span class="dv">1</span><span class="op">-</span>z) <span class="op">/</span><span class="st"> </span>lambda
+}
+
+lambda &lt;-<span class="st"> </span><span class="dv">1</span>
+sim &lt;-<span class="st"> </span><span class="kw">Finverse</span>(u, lambda)
+
+<span class="kw">print</span>(<span class="kw">c</span>(<span class="dt">u =</span> u, <span class="dt">sim =</span> sim))</code></pre></div>
+<pre><code>##         u       sim 
+## 0.5858003 0.8814071</code></pre>
+<pre><code>## Loading required package: latex2exp</code></pre>
+<p><img src="_main_files/figure-html/cdf%20exponential-1.png" width="672" /></p>
 <p>For more information see <a href="https://en.wikipedia.org/wiki/Probability_integral_transform">probability integral transform</a> and <a href="https://en.wikipedia.org/wiki/Inverse_transform_sampling">inverse transform sampling</a>. Because of this property, you can follow the steps below to simulate <span class="math inline">\(n\)</span> independent observations from a distribution with CDF <span class="math inline">\(F_X\)</span>:</p>
 <ol style="list-style-type: decimal">
 <li>Simulate <span class="math inline">\(n\)</span> indepdendent observations <span class="math inline">\(u_1, \ldots, u_n\)</span> from a uniform distribution (<code>runif</code> in R) on <span class="math inline">\([0, 1]\)</span>;</li>
@@ -328,7 +352,7 @@ sim &lt;-<span class="st"> </span><span class="kw">cdf.inverse</span>(u)</code><
 }
 
 <span class="kw">mean</span>(<span class="kw">deductible</span>(sim, <span class="dv">300</span>))</code></pre></div>
-<pre><code>## [1] 353.4294</code></pre>
+<pre><code>## [1] 382.2624</code></pre>
 </div>
 </div>
 </div>
@@ -410,7 +434,7 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
   
 <span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
 <span class="kw">mean</span>(aggregated.loss)</code></pre></div>
-<pre><code>## [1] 1.325635</code></pre>
+<pre><code>## [1] 1.32758</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @4</span>
 n &lt;-<span class="st"> </span><span class="dv">10000</span>
 nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
@@ -429,7 +453,7 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
   
 <span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
 <span class="kw">mean</span>(<span class="kw">pmax</span>(aggregated.loss <span class="op">-</span><span class="st"> </span><span class="fl">0.2</span>, <span class="dv">0</span>))</code></pre></div>
-<pre><code>## [1] 1.160636</code></pre>
+<pre><code>## [1] 1.159679</code></pre>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># @5</span>
 n &lt;-<span class="st"> </span><span class="dv">10000</span>
 nclaim &lt;-<span class="st"> </span><span class="kw">rpois</span>(n, <span class="dt">lambda =</span> <span class="dv">2</span>)
@@ -448,7 +472,7 @@ aggregated.loss &lt;-<span class="st"> </span><span class="kw">rep</span>(<span 
   
 <span class="co"># Calculate the expected loss per policy, when there is no deductible</span>
 <span class="kw">mean</span>(aggregated.loss)</code></pre></div>
-<pre><code>## [1] 0.9298092</code></pre>
+<pre><code>## [1] 0.9412715</code></pre>
 </div>
 </div>
 <div id="simulating-future-life-times-of-newborns" class="section level2">
